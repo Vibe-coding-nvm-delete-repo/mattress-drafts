@@ -784,6 +784,7 @@
       margin-bottom: 16px;
       border: 1px solid var(--line);
       background: var(--canvas-subtle);
+      position: relative;
     }
     .m-card-img-wrap img {
       width: 100%;
@@ -794,6 +795,93 @@
     }
     .m-product-card:hover .m-card-img-wrap img {
       transform: scale(1.03);
+    }
+    /* Future Content & In Lab Testing Translucent Lock Treatment */
+    .m-card-future {
+      opacity: 0.74;
+      filter: grayscale(22%);
+      border: 1px dashed rgba(18, 53, 60, 0.32);
+      background: rgba(255, 255, 255, 0.9);
+      position: relative;
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  filter 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .m-card-future:hover {
+      opacity: 1;
+      filter: grayscale(0%);
+      border: 1px solid var(--teal);
+      background: #ffffff;
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px -12px rgba(18, 53, 60, 0.16);
+    }
+    .m-img-lock-overlay {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .m-img-lock-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      font-family: var(--sans);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: rgba(18, 53, 60, 0.85);
+      color: #ffffff;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+    }
+    .m-img-lock-pill svg {
+      flex-shrink: 0;
+    }
+    .m-card-lock-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6a4f00;
+      background: #fef4d8;
+      border: 1px solid #f6df96;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+    }
+    .m-card-lock-tag svg {
+      flex-shrink: 0;
+    }
+    .m-section-status-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .m-section-lock-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: var(--radius-pill);
+      font-family: var(--sans);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: rgba(18, 53, 60, 0.08);
+      color: var(--teal-dark);
+      border: 1px dashed rgba(18, 53, 60, 0.35);
     }
     .m-card-badge-line {
       display: flex;
@@ -1380,6 +1468,12 @@
     @media (max-width: 768px) {
       #mobileQuickJumpWrap {
         display: block;
+      }
+    }
+    @media (min-width: 769px) {
+      #mobileDrawerSheet,
+      #mobileDrawerBackdrop {
+        display: none !important;
       }
     }
     .m-mobile-jump-btn {
@@ -2881,23 +2975,35 @@
             <div class="m-section-tag">Category 02 · Pillows</div>
             <h2 class="m-section-title">Saatva Pillow Reviews (4 Models)</h2>
             <p class="m-section-desc">
-              Tested for neck support, shape retention, and cooling across side, back, and stomach sleepers.
+              Laboratory evaluations currently underway. Full lab metrics, contour pressure mapping, and wash durability release Q4.
             </p>
           </div>
-          <span class="m-section-count-badge">4 Pillow Reviews</span>
+          <div class="m-section-status-group">
+            <span class="m-section-lock-pill">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              In Lab Testing · Coming Q4
+            </span>
+            <span class="m-section-count-badge">4 Pillow Models</span>
+          </div>
         </div>
 
         <!-- PILLOWS: BALANCED 2-COLUMN GRID (2x2) -->
         <div class="m-grid-2">
 
           <!-- 1. Latex Pillow -->
-          <article class="m-product-card">
+          <article class="m-product-card m-card-future">
             <div>
               <div class="m-card-img-wrap">
                 <img src="assets/illustrations/saatva_pillow_latex_watercolor.jpg" alt="Saatva Natural Latex Pillow deconstructed architectural watercolor illustration" loading="lazy">
+                <div class="m-img-lock-overlay">
+                  <span class="m-img-lock-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Future Content
+                  </span>
+                </div>
               </div>
               <div class="m-card-badge-line">
-                <span class="m-card-type-tag">Flagship Pillow</span>
+                <span class="m-card-lock-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> In Lab Testing</span>
               </div>
               <h3 class="m-card-heading">Saatva Latex Pillow</h3>
               <p class="m-card-summary">Shredded natural Talalay latex core surrounded by silky organic microdenier fiber and GOTS cotton cover.</p>
@@ -2914,13 +3020,19 @@
           </article>
 
           <!-- 2. Down Alternative -->
-          <article class="m-product-card">
+          <article class="m-product-card m-card-future">
             <div>
               <div class="m-card-img-wrap">
                 <img src="assets/illustrations/saatva_pillow_down_alt_watercolor.jpg" alt="Saatva Down Alternative Pillow deconstructed architectural watercolor illustration" loading="lazy">
+                <div class="m-img-lock-overlay">
+                  <span class="m-img-lock-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Future Content
+                  </span>
+                </div>
               </div>
               <div class="m-card-badge-line">
-                <span class="m-card-type-tag">Hypoallergenic</span>
+                <span class="m-card-lock-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> In Lab Testing</span>
               </div>
               <h3 class="m-card-heading">Down Alternative</h3>
               <p class="m-card-summary">Plush, airy microfiber clusters mimic natural goose down loft without triggering allergies or feather poking.</p>
@@ -2937,13 +3049,19 @@
           </article>
 
           <!-- 3. Memory Foam Pillow -->
-          <article class="m-product-card">
+          <article class="m-product-card m-card-future">
             <div>
               <div class="m-card-img-wrap">
                 <img src="assets/illustrations/saatva_pillow_memory_foam_watercolor.jpg" alt="Saatva Memory Foam Pillow deconstructed architectural watercolor illustration" loading="lazy">
+                <div class="m-img-lock-overlay">
+                  <span class="m-img-lock-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Future Content
+                  </span>
+                </div>
               </div>
               <div class="m-card-badge-line">
-                <span class="m-card-type-tag">Cooling Graphite</span>
+                <span class="m-card-lock-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> In Lab Testing</span>
               </div>
               <h3 class="m-card-heading">Memory Foam</h3>
               <p class="m-card-summary">Graphite-infused contoured memory foam draws body heat away while maintaining precise cervical neck support.</p>
@@ -2960,13 +3078,19 @@
           </article>
 
           <!-- 4. Organic Quilted -->
-          <article class="m-product-card">
+          <article class="m-product-card m-card-future">
             <div>
               <div class="m-card-img-wrap">
                 <img src="assets/illustrations/saatva_pillow_organic_quilted_watercolor.jpg" alt="Saatva Organic Quilted Pillow deconstructed architectural watercolor illustration" loading="lazy">
+                <div class="m-img-lock-overlay">
+                  <span class="m-img-lock-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Future Content
+                  </span>
+                </div>
               </div>
               <div class="m-card-badge-line">
-                <span class="m-card-type-tag">100% GOTS Pure</span>
+                <span class="m-card-lock-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> In Lab Testing</span>
               </div>
               <h3 class="m-card-heading">Organic Quilted</h3>
               <p class="m-card-summary">Channel-quilted organic cotton outer cover filled with pure natural organic cotton fibers for chemical-free sleep.</p>
@@ -2997,10 +3121,16 @@
             <div class="m-section-tag">Category 03 · Sheets & Bedding</div>
             <h2 class="m-section-title">Saatva Sheets & Bedding Reviews (5 Sets)</h2>
             <p class="m-section-desc">
-              Real-world softness, wash durability, and breathability ratings for Saatva organic sheets and bedding.
+              Laboratory wash durability and thread longevity evaluations underway. Full lab metrics release Q4.
             </p>
           </div>
-          <span class="m-section-count-badge">5 Bedding Reviews</span>
+          <div class="m-section-status-group">
+            <span class="m-section-lock-pill">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              In Lab Testing · Coming Q4
+            </span>
+            <span class="m-section-count-badge">5 Bedding Sets</span>
+          </div>
         </div>
 
         <!-- FEATURED BEDDING: ORGANIC SATEEN SHEET SET -->
@@ -3059,13 +3189,19 @@
         <div class="m-grid-2">
 
           <!-- 1. Organic Percale -->
-          <article class="m-product-card">
+          <article class="m-product-card m-card-future">
             <div>
               <div class="m-card-img-wrap">
                 <img src="assets/illustrations/saatva_bedding_percale_watercolor.jpg" alt="Saatva Organic Percale Sheet Set architectural watercolor illustration" loading="lazy">
+                <div class="m-img-lock-overlay">
+                  <span class="m-img-lock-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Future Content
+                  </span>
+                </div>
               </div>
               <div class="m-card-badge-line">
-                <span class="m-card-type-tag">Crisp & Cool</span>
+                <span class="m-card-lock-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> In Lab Testing</span>
               </div>
               <h3 class="m-card-heading">Organic Percale</h3>
               <p class="m-card-summary">Classic 200 TC one-over-one-under percale weave. Crisp, matte finish reminiscent of luxury European hotel linens.</p>
@@ -3082,13 +3218,19 @@
           </article>
 
           <!-- 2. Belgian Linen -->
-          <article class="m-product-card">
+          <article class="m-product-card m-card-future">
             <div>
               <div class="m-card-img-wrap">
                 <img src="assets/illustrations/saatva_bedding_linen_watercolor.jpg" alt="Saatva Belgian Linen Sheet Set architectural watercolor illustration" loading="lazy">
+                <div class="m-img-lock-overlay">
+                  <span class="m-img-lock-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Future Content
+                  </span>
+                </div>
               </div>
               <div class="m-card-badge-line">
-                <span class="m-card-type-tag">Heirloom Linen</span>
+                <span class="m-card-lock-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> In Lab Testing</span>
               </div>
               <h3 class="m-card-heading">Belgian Linen</h3>
               <p class="m-card-summary">Woven from 100% natural European flax linen. Naturally thermo-regulating, moisture-wicking, and hypoallergenic.</p>
@@ -3105,13 +3247,19 @@
           </article>
 
           <!-- 3. Organic Flannel -->
-          <article class="m-product-card">
+          <article class="m-product-card m-card-future">
             <div>
               <div class="m-card-img-wrap">
                 <img src="assets/illustrations/saatva_bedding_flannel_watercolor.jpg" alt="Saatva Organic Velvet Flannel Sheet Set architectural watercolor illustration" loading="lazy">
+                <div class="m-img-lock-overlay">
+                  <span class="m-img-lock-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Future Content
+                  </span>
+                </div>
               </div>
               <div class="m-card-badge-line">
-                <span class="m-card-type-tag">Cozy Flannel</span>
+                <span class="m-card-lock-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> In Lab Testing</span>
               </div>
               <h3 class="m-card-heading">Velvet Flannel</h3>
               <p class="m-card-summary">Brushed organic cotton flannel crafted in Portugal. Superior velvet softness without synthetic shedding.</p>
@@ -3128,13 +3276,19 @@
           </article>
 
           <!-- 4. Diamond Comforter -->
-          <article class="m-product-card">
+          <article class="m-product-card m-card-future">
             <div>
               <div class="m-card-img-wrap">
                 <img src="assets/illustrations/saatva_bedding_comforter_watercolor.jpg" alt="Saatva Diamond Quilted All-Season Duvet Comforter architectural watercolor illustration" loading="lazy">
+                <div class="m-img-lock-overlay">
+                  <span class="m-img-lock-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    Future Content
+                  </span>
+                </div>
               </div>
               <div class="m-card-badge-line">
-                <span class="m-card-type-tag">All-Season Duvet</span>
+                <span class="m-card-lock-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> In Lab Testing</span>
               </div>
               <h3 class="m-card-heading">Diamond Duvet</h3>
               <p class="m-card-summary">Hypoallergenic organic cotton shell with channel quilting to keep thermal fill evenly distributed without clumping.</p>
