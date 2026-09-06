@@ -92,23 +92,30 @@
     }
 
     /* ==========================================================================
-       TOP PROMO BANNER: LABOR DAY DEAL
+       TOP PROMO BANNER: LABOR DAY DEAL (EXACT PARITY WITH OTHER MOCKUPS)
        ========================================================================== */
+    .m-deal-strip,
     .m-deal-banner {
-      background: #0b222d;
-      color: #ffffff;
-      padding: 8px 0;
-      font-size: 13px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: #0e2732;
+      color: #dce9ec;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: var(--fs-xs);
+      letter-spacing: 0.01em;
+      margin: 0 !important;
     }
+    .m-deal-strip-inner,
     .m-deal-inner {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 16px;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      line-height: 1.4;
+      text-align: center;
     }
     .m-deal-content {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 10px;
       flex-wrap: wrap;
@@ -116,37 +123,49 @@
     .m-deal-badge {
       background: var(--coral-gradient);
       color: #ffffff;
-      font-size: 10.5px;
-      font-weight: 800;
+      font-size: var(--fs-nano);
+      font-weight: var(--fw-extrabold);
+      letter-spacing: 0.04em;
+      padding: 2px 7px;
+      border-radius: 4px;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
-      padding: 3px 9px;
-      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
     }
     .m-deal-text {
-      color: #e1ebf0;
+      color: #dce9ec;
+      font-weight: var(--fw-medium);
+      font-size: var(--fs-xs);
     }
     .m-deal-text strong {
       color: #ffffff;
-      font-weight: 700;
+      font-weight: var(--fw-bold);
     }
+    .m-deal-link,
     .m-deal-cta {
+      color: #f7a38b;
+      font-weight: var(--fw-bold);
+      text-decoration: none;
+      margin-left: 4px;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      background: var(--coral-gradient);
-      color: #ffffff !important;
-      font-size: 12px;
-      font-weight: 700;
-      padding: 6px 14px;
-      border-radius: var(--radius-pill);
-      box-shadow: 0 4px 12px rgba(232, 93, 65, 0.35);
+      gap: 3px;
+      transition: color 0.15s ease;
       white-space: nowrap;
-      transition: all 0.18s ease;
+      font-size: var(--fs-xs);
+      background: none;
+      padding: 0;
+      box-shadow: none;
+      border-radius: 0;
     }
+    .m-deal-link:hover,
     .m-deal-cta:hover {
-      background: var(--coral-hover-gradient);
-      transform: translateY(-1px);
+      color: #ffffff;
+      text-decoration: underline;
+      background: none;
+      transform: none;
     }
 
     /* ==========================================================================
@@ -1862,17 +1881,23 @@
         --shell-pad: 16px;
         --section-pad-y: 40px;
       }
+      .m-deal-strip-inner,
       .m-deal-inner {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         text-align: center;
-        gap: 8px;
+        gap: 6px 10px;
+        font-size: var(--fs-xs);
       }
       .m-deal-content {
-        flex-direction: column;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
         gap: 6px;
       }
-      .m-deal-cta {
-        width: 100%;
+      .m-deal-cta,
+      .m-deal-link {
+        width: auto;
         justify-content: center;
       }
       .m-grid-4, .m-grid-3, .m-grid-2 {
@@ -1949,17 +1974,12 @@
   
 
   <!-- TOP PROMO BANNER: LABOR DAY EXCLUSIVE DEAL -->
-  <aside class="m-deal-banner" aria-label="Labor Day Promotional Offer">
-    <div class="m-shell m-deal-inner">
-      <div class="m-deal-content">
-        <span class="m-deal-badge">🔥 Exclusive Deal</span>
-        <span class="m-deal-text">
-          Labor Day Savings: <strong>Up to $600 off Saatva mattresses</strong> with verified Nappedia research coupon
-        </span>
-      </div>
-      <a class="m-deal-cta" href="https://www.saatva.com/?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-        <span>Claim Saatva Deal</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+  <aside class="m-deal-strip m-deal-banner" aria-label="Labor Day Promotional Offer">
+    <div class="m-shell m-deal-strip-inner m-deal-inner">
+      <span class="m-deal-badge">Holiday Savings</span>
+      <span class="m-deal-text">Labor Day Bedding Savings: <strong>Verified up to $600 off Saatva and Bear tested models</strong></span>
+      <a class="m-deal-link m-deal-cta" href="http://localhost:8055/deals" target="_blank" rel="noopener sponsored">
+        <span>Claim Verified Deals &rarr;</span>
       </a>
     </div>
   </aside>
