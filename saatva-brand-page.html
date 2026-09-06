@@ -1141,18 +1141,20 @@
       margin-bottom: 14px;
     }
     .m-model-illo {
+      max-width: 520px;
       width: 100%;
-      background: #faf3e7;
+      aspect-ratio: 16 / 9;
+      background: var(--canvas-subtle);
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
-      margin: 0 0 16px;
+      margin: 16px 0 24px;
       overflow: hidden;
       box-shadow: var(--shadow-sm);
     }
     .m-model-illo img {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
       object-fit: cover;
       transition: transform 0.25s ease;
     }
@@ -1529,6 +1531,10 @@
       .m-grid-2 {
         grid-template-columns: 1fr;
       }
+      .m-model-illo {
+        max-width: 100%;
+        margin: 12px 0 18px;
+      }
     }
 
     @media (max-width: 640px) {
@@ -1727,7 +1733,7 @@
         <span class="m-subnav-count">5</span>
       </a>
       <a class="m-subnav-pill" href="#accessories">
-        <span>Toppers & Bases</span>
+        <span>Accessories</span>
         <span class="m-subnav-count">6</span>
       </a>
       <a class="m-subnav-pill" href="#lineage">
@@ -2044,6 +2050,9 @@
           </div>
 
           <h2 class="m-model-h2" id="saatva-classic">1. Saatva Classic Mattress Review</h2>
+          <div class="m-model-illo" role="img" aria-label="Saatva Classic architectural watercolor cutaway">
+            <img src="assets/illustrations/saatva_classic_watercolor.jpg" alt="Saatva Classic Architectural Watercolor Cutaway" loading="lazy">
+          </div>
           
           <div class="m-flagship-grid" style="margin-top: 20px;">
             <div>
@@ -2086,11 +2095,8 @@
               </div>
             </div>
 
-            <!-- Cutaway Image, Quick Metrics & Flagship Highlights -->
+            <!-- Quick Metrics & Flagship Highlights -->
             <div class="m-flagship-visual">
-              <div class="m-cutaway-img-wrap">
-                <img src="assets/illustrations/saatva_classic_watercolor.jpg" alt="Saatva Classic Architectural Watercolor Cutaway" loading="lazy">
-              </div>
 
               <div class="m-model-sidebar-card" style="margin-top: 14px;">
                 <div class="m-model-sidebar-head">
@@ -2122,6 +2128,7 @@
           </div>
 
           <h2 class="m-model-h2" id="loom-and-leaf">2. Loom & Leaf Mattress Review</h2>
+          <div class="m-model-illo" role="img" aria-label="Loom & Leaf architectural watercolor cutaway"><img src="assets/illustrations/loom_and_leaf_watercolor.jpg" alt="Loom & Leaf Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
@@ -2145,7 +2152,6 @@
             </div>
 
             <div class="m-model-sidebar-card">
-          <div class="m-model-illo" role="img" aria-label="Loom & Leaf architectural watercolor cutaway"><img src="assets/illustrations/loom_and_leaf_watercolor.jpg" alt="Loom & Leaf Architectural Watercolor Cutaway" loading="lazy"></div>
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2173,6 +2179,7 @@
           </div>
 
           <h2 class="m-model-h2" id="zenhaven">3. Zenhaven Mattress Review</h2>
+          <div class="m-model-illo" role="img" aria-label="Zenhaven architectural watercolor cutaway"><img src="assets/illustrations/zenhaven_watercolor.jpg" alt="Zenhaven Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
@@ -2196,7 +2203,6 @@
             </div>
 
             <div class="m-model-sidebar-card">
-          <div class="m-model-illo" role="img" aria-label="Zenhaven architectural watercolor cutaway"><img src="assets/illustrations/zenhaven_watercolor.jpg" alt="Zenhaven Architectural Watercolor Cutaway" loading="lazy"></div>
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2224,6 +2230,7 @@
           </div>
 
           <h2 class="m-model-h2" id="saatva-latex-hybrid">4. Saatva Latex Hybrid Mattress Review</h2>
+          <div class="m-model-illo" role="img" aria-label="Saatva Latex Hybrid architectural watercolor cutaway"><img src="assets/illustrations/saatva_latex_hybrid_watercolor.jpg" alt="Saatva Latex Hybrid Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
@@ -2247,7 +2254,6 @@
             </div>
 
             <div class="m-model-sidebar-card">
-          <div class="m-model-illo" role="img" aria-label="Saatva Latex Hybrid architectural watercolor cutaway"><img src="assets/illustrations/saatva_latex_hybrid_watercolor.jpg" alt="Saatva Latex Hybrid Architectural Watercolor Cutaway" loading="lazy"></div>
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2275,6 +2281,7 @@
           </div>
 
           <h2 class="m-model-h2" id="solaire">5. Saatva Solaire Mattress Review</h2>
+          <div class="m-model-illo" role="img" aria-label="Saatva Solaire architectural watercolor cutaway"><img src="assets/illustrations/solaire_watercolor.jpg" alt="Saatva Solaire Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
@@ -2298,7 +2305,6 @@
             </div>
 
             <div class="m-model-sidebar-card">
-          <div class="m-model-illo" role="img" aria-label="Saatva Solaire architectural watercolor cutaway"><img src="assets/illustrations/solaire_watercolor.jpg" alt="Saatva Solaire Architectural Watercolor Cutaway" loading="lazy"></div>
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2326,6 +2332,7 @@
           </div>
 
           <h2 class="m-model-h2" id="memory-foam-hybrid">6. Memory Foam Hybrid Mattress Review</h2>
+          <div class="m-model-illo" role="img" aria-label="Memory Foam Hybrid architectural watercolor cutaway"><img src="assets/illustrations/memory_foam_hybrid_watercolor.jpg" alt="Memory Foam Hybrid Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
@@ -2349,7 +2356,6 @@
             </div>
 
             <div class="m-model-sidebar-card">
-          <div class="m-model-illo" role="img" aria-label="Memory Foam Hybrid architectural watercolor cutaway"><img src="assets/illustrations/memory_foam_hybrid_watercolor.jpg" alt="Memory Foam Hybrid Architectural Watercolor Cutaway" loading="lazy"></div>
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2377,6 +2383,7 @@
           </div>
 
           <h2 class="m-model-h2" id="contour5">7. Saatva Contour5 Mattress Review</h2>
+          <div class="m-model-illo" role="img" aria-label="Saatva Contour5 architectural watercolor cutaway"><img src="assets/illustrations/contour5_watercolor.jpg" alt="Saatva Contour5 Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
@@ -2400,7 +2407,6 @@
             </div>
 
             <div class="m-model-sidebar-card">
-          <div class="m-model-illo" role="img" aria-label="Saatva Contour5 architectural watercolor cutaway"><img src="assets/illustrations/contour5_watercolor.jpg" alt="Saatva Contour5 Architectural Watercolor Cutaway" loading="lazy"></div>
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2428,6 +2434,7 @@
           </div>
 
           <h2 class="m-model-h2" id="saatva-rx">8. Saatva RX Mattress Review</h2>
+          <div class="m-model-illo" role="img" aria-label="Saatva RX architectural watercolor cutaway"><img src="assets/illustrations/saatva_rx_watercolor.jpg" alt="Saatva RX Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
@@ -2451,7 +2458,6 @@
             </div>
 
             <div class="m-model-sidebar-card">
-          <div class="m-model-illo" role="img" aria-label="Saatva RX architectural watercolor cutaway"><img src="assets/illustrations/saatva_rx_watercolor.jpg" alt="Saatva RX Architectural Watercolor Cutaway" loading="lazy"></div>
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2479,6 +2485,7 @@
           </div>
 
           <h2 class="m-model-h2" id="saatva-hd">9. Saatva HD Mattress Review</h2>
+          <div class="m-model-illo" role="img" aria-label="Saatva HD architectural watercolor cutaway"><img src="assets/illustrations/saatva_hd_watercolor.jpg" alt="Saatva HD Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
@@ -2502,7 +2509,6 @@
             </div>
 
             <div class="m-model-sidebar-card">
-          <div class="m-model-illo" role="img" aria-label="Saatva HD architectural watercolor cutaway"><img src="assets/illustrations/saatva_hd_watercolor.jpg" alt="Saatva HD Architectural Watercolor Cutaway" loading="lazy"></div>
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2530,6 +2536,7 @@
           </div>
 
           <h2 class="m-model-h2" id="saatva-youth">10. Saatva Youth Mattress Review</h2>
+          <div class="m-model-illo" role="img" aria-label="Saatva Youth architectural watercolor cutaway"><img src="assets/illustrations/saatva_youth_watercolor.jpg" alt="Saatva Youth Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
@@ -2553,7 +2560,6 @@
             </div>
 
             <div class="m-model-sidebar-card">
-          <div class="m-model-illo" role="img" aria-label="Saatva Youth architectural watercolor cutaway"><img src="assets/illustrations/saatva_youth_watercolor.jpg" alt="Saatva Youth Architectural Watercolor Cutaway" loading="lazy"></div>
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2581,6 +2587,7 @@
           </div>
 
           <h2 class="m-model-h2" id="crib-mattress">11. Dual-Sided Crib Mattress Review</h2>
+          <div class="m-model-illo" role="img" aria-label="Dual-Sided Crib architectural watercolor cutaway"><img src="assets/illustrations/crib_mattress_watercolor.jpg" alt="Dual-Sided Crib Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
@@ -2604,7 +2611,6 @@
             </div>
 
             <div class="m-model-sidebar-card">
-          <div class="m-model-illo" role="img" aria-label="Dual-Sided Crib architectural watercolor cutaway"><img src="assets/illustrations/crib_mattress_watercolor.jpg" alt="Dual-Sided Crib Architectural Watercolor Cutaway" loading="lazy"></div>
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2888,24 +2894,24 @@
     </section>
 
     <!-- ======================================================================
-         SECTION 4: TOPPERS, PROTECTORS & BASES (6 MODELS)
+         SECTION 4: SLEEP ACCESSORIES, PROTECTORS & BASES (6 MODELS)
          Balanced 3-Column Grid (2 Rows of 3 = Zero Orphans)
          ====================================================================== -->
     <section class="m-section" id="accessories">
       <div class="m-shell">
         <div class="m-section-header">
           <div>
-            <div class="m-section-tag">Category 04 · Toppers & Bases</div>
-            <h2 class="m-section-title">Saatva Toppers, Protectors & Bases (6 Models)</h2>
+            <div class="m-section-tag">Category 04 · Sleep Accessories</div>
+            <h2 class="m-section-title">Saatva Sleep Accessories & Bases (6 Models)</h2>
             <p class="m-section-desc">
-              Cooling toppers, mattress protectors, and adjustable bases tested for comfort, durability, and quiet motor performance.
+              Cooling mattress toppers, waterproof protectors, and ergonomic adjustable bases tested for pressure relief, temperature regulation, and lasting spinal support.
             </p>
           </div>
           <span class="m-section-count-badge">6 Accessory Reviews</span>
         </div>
 
-        <!-- TOPPERS & BASES: BALANCED 2-COLUMN GRID (3x2) -->
-        <div class="m-grid-2">
+        <!-- ACCESSORIES: BALANCED 3-COLUMN GRID (3x2) -->
+        <div class="m-grid-3">
 
           <!-- 1. Graphite Topper -->
           <article class="m-product-card">
