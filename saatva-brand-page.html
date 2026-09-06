@@ -1195,6 +1195,79 @@
       border: 2px solid var(--teal-border);
       background: #ffffff;
       box-shadow: var(--shadow-md);
+      position: relative;
+    }
+    .m-flagship-centered-head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .m-flagship-centered-h2 {
+      text-align: center;
+      font-size: clamp(26px, 2.8vw, 34px);
+      margin: 0 auto 12px;
+      line-height: 1.2;
+    }
+    .m-flagship-centered-lede {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 24px;
+      font-size: 15.5px;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+    .m-flagship-centered-illo {
+      max-width: 720px;
+      margin: 0 auto 28px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: 0 4px 20px rgba(23,63,81,0.08);
+      background: var(--canvas-subtle);
+    }
+    .m-flagship-centered-illo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .m-flagship-consolidated-layers {
+      max-width: 800px;
+      margin: 0 auto 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: left;
+    }
+    .m-flagship-consolidated-layers .m-flagship-layer-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: #f8fafc;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 13px 18px;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .m-flagship-consolidated-layers .m-flagship-layer-item:hover {
+      border-color: var(--teal);
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(23,63,81,0.06);
+    }
+    .m-flagship-single-row-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      margin-bottom: 8px;
+    }
+    .m-flagship-store-link-wrap {
+      text-align: center;
+      margin-top: 12px;
     }
     .m-model-head-bar {
       display: flex;
@@ -2394,85 +2467,82 @@
 
         <!-- MODEL 1: Saatva Classic (FLAGSHIP PICK) -->
         <article class="m-model-card m-flagship-model-card" id="model-saatva-classic" data-category="hybrid">
-          <div class="m-model-head-bar">
-            <div class="m-model-head-left">
-              <span class="m-flagship-top-badge">★ Flagship Pick</span>
-              <span class="m-model-category-tag"><svg class="m-type-ic m-type-ic-sm" aria-hidden="true"><use href="#np-ic-innerspring"/></svg>Innerspring Hybrid · Best Overall Innerspring</span>
+          <!-- Flagship Pick Badge (Centered on top edge) -->
+          <span class="m-flagship-top-badge" style="left: 50%; transform: translateX(-50%);">★ Flagship Pick</span>
+
+          <!-- Centered Category Tag & Nappedia Score -->
+          <div class="m-model-head-bar m-flagship-centered-head">
+            <span class="m-model-category-tag"><svg class="m-type-ic m-type-ic-sm" aria-hidden="true"><use href="#np-ic-innerspring"/></svg>Innerspring Hybrid · Best Overall Innerspring</span>
+          </div>
+
+          <!-- Centered H2 Title -->
+          <h2 class="m-model-h2 m-flagship-centered-h2" id="saatva-classic">1. Saatva Classic Mattress Review</h2>
+
+          <!-- Centered Lede Paragraph -->
+          <p class="m-model-lede m-flagship-centered-lede">
+            Saatva’s flagship luxury hybrid innerspring mattress pairs an active dual-coil system with an organic cotton Euro pillow top and lumbar spinal wire to deliver responsive, pressure-relieving hotel comfort across tailored profile heights and firmness options.
+          </p>
+
+          <!-- Centered Architectural Watercolor Illustration -->
+          <div class="m-model-illo m-flagship-centered-illo" role="img" aria-label="Saatva Classic architectural watercolor cutaway">
+            <img src="assets/illustrations/saatva_classic_watercolor.jpg" alt="Saatva Classic Architectural Watercolor Cutaway" loading="lazy">
+          </div>
+
+          <!-- Consolidated A-E Layer & Specification Dissection Directly Under Image -->
+          <div class="m-flagship-layers m-flagship-consolidated-layers">
+            <div class="m-flagship-layer-item">
+              <span class="m-layer-letter">A</span>
+              <div class="m-layer-text">
+                <strong>3" Euro Pillow Top (Organic Cover):</strong>
+                <span>100% GOTS certified organic cotton cover treated with Guardin® botanical antimicrobial protection and plush cloud cushioning for hypoallergenic surface pressure relief.</span>
+              </div>
+            </div>
+            <div class="m-flagship-layer-item">
+              <span class="m-layer-letter">B</span>
+              <div class="m-layer-text">
+                <strong>Active Lumbar Zone® Spinal Wire:</strong>
+                <span>Patented active spinal wire reinforced with high-density memory foam in the center third to provide targeted lower back lift and maintain neutral spinal alignment.</span>
+              </div>
+            </div>
+            <div class="m-flagship-layer-item">
+              <span class="m-layer-letter">C</span>
+              <div class="m-layer-text">
+                <strong>Dual-Coil Support Core (1,300 Total Coils):</strong>
+                <span>884 contouring pocket coils (14.5-gauge) layered over 416 tempered steel base coils (13-gauge) deliver buoyant hotel responsiveness while preventing sagging and isolating motion.</span>
+              </div>
+            </div>
+            <div class="m-flagship-layer-item">
+              <span class="m-layer-letter">D</span>
+              <div class="m-layer-text">
+                <strong>Custom Profile Heights &amp; Firmness Options:</strong>
+                <span>Available in 11.5" or 14.5" custom profile heights across 3 firmness levels (Plush Soft 3, Luxury Firm 6, Firm 8 <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 65%;"></span></span>) to accommodate side, back, stomach, and combo sleepers.</span>
+              </div>
+            </div>
+            <div class="m-flagship-layer-item">
+              <span class="m-layer-letter">E</span>
+              <div class="m-layer-text">
+                <strong>White-Glove Delivery &amp; Lifetime Warranty:</strong>
+                <span>Complimentary in-room delivery, full setup, and old mattress removal backed by a 365-night home trial and lifetime warranty.</span>
+              </div>
             </div>
           </div>
 
-          <h2 class="m-model-h2" id="saatva-classic">1. Saatva Classic Mattress Review</h2>
-          
-          <div class="m-flagship-grid" style="margin-top: 20px;">
-            <div>
-              <div class="m-model-illo" role="img" aria-label="Saatva Classic architectural watercolor cutaway">
-                <img src="assets/illustrations/saatva_classic_watercolor.jpg" alt="Saatva Classic Architectural Watercolor Cutaway" loading="lazy">
-              </div>
+          <!-- Dual Action CTA Row in a Single Row -->
+          <div class="m-model-cta-row m-flagship-single-row-cta">
+            <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/saatva-classic?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Saatva Classic Price ($600 Off) ↗</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
+            <a class="m-btn-secondary-ink" href="/reviews/saatva/saatva-classic">
+              <span>Read Full In-Depth Review &rarr;</span>
+            </a>
+          </div>
 
-              <!-- Layer Cutaway Dissection -->
-              <div class="m-flagship-layers" style="margin: 0 0 20px;">
-                <div class="m-flagship-layer-item">
-                  <span class="m-layer-letter">A</span>
-                  <div class="m-layer-text"><strong>3" Euro Pillow Top:</strong> <span>100% GOTS organic cotton with Guardin® botanical antimicrobial treatment.</span></div>
-                </div>
-                <div class="m-flagship-layer-item">
-                  <span class="m-layer-letter">B</span>
-                  <div class="m-layer-text"><strong>Active Lumbar Zone® Wire:</strong> <span>Patented spinal wire and high-density memory foam center third for lumbar lift.</span></div>
-                </div>
-                <div class="m-flagship-layer-item">
-                  <span class="m-layer-letter">C</span>
-                  <div class="m-layer-text"><strong>884 Pocketed Comfort Coils:</strong> <span>14.5-gauge individually wrapped coils for pinpoint pressure relief and motion isolation.</span></div>
-                </div>
-                <div class="m-flagship-layer-item">
-                  <span class="m-layer-letter">D</span>
-                  <div class="m-layer-text"><strong>416 Tempered Steel Base Coils:</strong> <span>13-gauge connected coils prevent sagging and ensure decades of structural durability.</span></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Column -->
-            <div>
-              <p class="m-model-lede">Saatva’s flagship luxury hybrid innerspring mattress, built with a dual-coil system that pairs 884 contouring pocket coils with 416 tempered steel support coils. Topped with a 3-inch organic cotton Euro pillow top and patented Lumbar Zone active spinal wire, it delivers the responsive support of a traditional hotel bed with pressure-relieving cushioning. Available in two profile heights and three firmness levels to fit virtually any sleep style.</p>
-
-              <!-- Quick Specs Grid -->
-              <div class="m-model-specs-box">
-                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">11.5" or 14.5" Custom Options</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Plush Soft (3), Luxury Firm (6), Firm (8) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 65%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Support Core:</span><span class="m-model-spec-v">Dual-Coil Tempered Steel & Pocketed Coils</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Lumbar Support:</span><span class="m-model-spec-v">Patented Lumbar Zone® Active Spinal Wire</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
-              </div>
-
-              <!-- Quick Metrics & Flagship Highlights -->
-
-
-              <div class="m-model-sidebar-card" style="margin-bottom: 24px;">
-                <div class="m-model-sidebar-box">
-                  <div class="m-model-sidebar-head">
-                    <strong>Why Choose the Flagship?</strong>
-                  </div>
-                  <ul class="m-model-pro-list">
-                    <li><strong>Target Match:</strong> Combination Sleepers, Lumbar Relief, Hotel Feel</li>
-                    <li><strong>Dual-Coil Core:</strong> 884 contouring pocket coils + 416 tempered steel coils</li>
-                    <li><strong>Active Lumbar Zone:</strong> Patented spinal wire + high-density center third</li>
-                    <li><strong>White-Glove Delivery:</strong> Free in-room delivery, setup, & mattress removal</li>
-                    <li><strong>Risk-Free Trial:</strong> 365 nights at home with lifetime warranty</li>
-                  </ul>
-                  <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line);">
-                    <a class="m-direct-store-link" href="https://www.saatva.com/mattresses/saatva-classic?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-                      <span>Direct to Saatva Store Page ↗</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Dual Action CTA Row -->
-              <div class="m-model-cta-row">
-                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/saatva-classic?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-                  <span>Check Saatva Classic Price ($600 Off) ↗</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-                <a class="m-btn-secondary-ink" href="/reviews/saatva/saatva-classic">
-                  <span>Read Full In-Depth Review →</span>
-                </a>
-              </div>
-            </div>
+          <!-- Direct to Store Link -->
+          <div class="m-flagship-store-link-wrap">
+            <a class="m-direct-store-link" href="https://www.saatva.com/mattresses/saatva-classic?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Direct to Saatva Store Page ↗</span>
+            </a>
           </div>
         </article>
 
