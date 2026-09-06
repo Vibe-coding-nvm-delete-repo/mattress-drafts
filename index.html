@@ -1254,32 +1254,257 @@
       color: var(--coral-mid);
     }
 
-    /* HIGH-CONTRAST CARD ACTION BUTTON */
+    /* HIGH-CONTRAST ACTION CORAL CARD BUTTON */
     .m-card-btn-action {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      background: #ffffff;
-      border: 1.5px solid var(--ink);
-      color: var(--ink);
+      background: var(--coral-gradient);
+      border: 1.5px solid transparent;
+      color: #ffffff !important;
       font-size: 13.5px;
       font-weight: 750;
       padding: 12px 18px;
       border-radius: var(--radius-pill);
+      box-shadow: 0 4px 14px rgba(232, 93, 65, 0.32);
       transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      text-decoration: none;
     }
     .m-card-btn-action svg {
       transition: transform 0.2s ease;
     }
+    .m-card-btn-action:hover,
     .m-product-card:hover .m-card-btn-action {
-      background: var(--coral-gradient);
-      color: #ffffff !important;
-      border-color: transparent;
-      box-shadow: 0 4px 16px rgba(232, 93, 65, 0.35);
+      background: var(--coral-hover-gradient);
+      box-shadow: 0 6px 20px rgba(232, 93, 65, 0.45);
+      transform: translateY(-2px);
     }
+    .m-card-btn-action:hover svg,
     .m-product-card:hover .m-card-btn-action svg {
       transform: translateX(4px);
+    }
+
+    /* LINEUP FILTER CHIPS BAR */
+    .m-model-filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+      padding: 14px 20px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      flex-wrap: wrap;
+    }
+    .m-filter-bar-label {
+      font-size: 12px;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .m-filter-chips-list {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .m-lineup-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 650;
+      color: var(--ink);
+      background: var(--canvas-subtle);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: all 0.18s ease;
+      font-family: inherit;
+    }
+    .m-lineup-chip:hover {
+      border-color: var(--teal);
+      color: var(--teal-dark);
+      background: var(--teal-soft);
+    }
+    .m-lineup-chip.active {
+      background: var(--teal-dark);
+      color: #ffffff;
+      border-color: var(--teal-dark);
+      box-shadow: 0 2px 8px rgba(27, 104, 96, 0.25);
+    }
+    .m-lineup-chip .m-chip-count {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 1px 6px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.08);
+    }
+    .m-lineup-chip.active .m-chip-count {
+      background: rgba(255, 255, 255, 0.22);
+      color: #ffffff;
+    }
+
+    /* MINI LAB SPEC PROGRESS METERS */
+    .m-metric-bar {
+      display: inline-block;
+      width: 58px;
+      height: 6px;
+      background: #e2ece9;
+      border-radius: 3px;
+      overflow: hidden;
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+    .m-metric-fill {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, #2d8b82, #1d5c6e);
+      border-radius: 3px;
+    }
+
+    /* MOBILE QUICK-JUMP FLOATING DRAWER */
+    #mobileQuickJumpWrap {
+      position: fixed;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 999;
+      display: none;
+    }
+    @media (max-width: 768px) {
+      #mobileQuickJumpWrap {
+        display: block;
+      }
+    }
+    .m-mobile-jump-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--ink);
+      color: #ffffff;
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 6px 20px rgba(13, 39, 51, 0.35);
+      border-radius: var(--radius-pill);
+      padding: 11px 22px;
+      font-size: 13.5px;
+      font-weight: 750;
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: all 0.18s ease;
+      font-family: inherit;
+    }
+    .m-mobile-jump-btn:active {
+      transform: scale(0.96);
+    }
+    .m-drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 39, 51, 0.6);
+      backdrop-filter: blur(3px);
+      z-index: 10000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .m-drawer-backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .m-drawer-sheet {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      max-height: 82vh;
+      background: #ffffff;
+      border-radius: 20px 20px 0 0;
+      padding: 20px 20px 32px;
+      z-index: 10001;
+      transform: translateY(100%);
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+      overflow-y: auto;
+      box-shadow: 0 -10px 36px rgba(0, 0, 0, 0.25);
+    }
+    .m-drawer-sheet.active {
+      transform: translateY(0);
+    }
+    .m-drawer-drag-handle {
+      width: 44px;
+      height: 5px;
+      background: #c5d4da;
+      border-radius: 3px;
+      margin: 0 auto 16px;
+    }
+    .m-drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 16px;
+    }
+    .m-drawer-title {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0;
+    }
+    .m-drawer-close-btn {
+      background: var(--canvas-subtle);
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .m-drawer-body {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .m-drawer-group-title {
+      font-size: 11.5px;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--teal-dark);
+      margin-bottom: 8px;
+    }
+    .m-drawer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .m-drawer-link {
+      display: block;
+      padding: 10px 14px;
+      background: var(--canvas-subtle);
+      border: 1px solid var(--line-subtle);
+      border-radius: var(--radius-sm);
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+      transition: all 0.15s ease;
+    }
+    .m-drawer-link:active, .m-drawer-link:hover {
+      background: var(--teal-soft);
+      border-color: var(--teal);
+      color: var(--teal-dark);
     }
 
     /* FEATURED BEDDING CARD */
@@ -2037,11 +2262,23 @@
           </div>
         </div>
 
+        <!-- HIGH-INTENT MODEL FILTER CHIPS -->
+        <div class="m-model-filter-bar" role="region" aria-label="Filter mattresses by type">
+          <span class="m-filter-bar-label">Filter Lineup:</span>
+          <div class="m-filter-chips-list">
+            <button type="button" class="m-lineup-chip active" data-filter="all">All Models <span class="m-chip-count">11</span></button>
+            <button type="button" class="m-lineup-chip" data-filter="hybrid">Hybrid <span class="m-chip-count">4</span></button>
+            <button type="button" class="m-lineup-chip" data-filter="foam">Memory Foam <span class="m-chip-count">3</span></button>
+            <button type="button" class="m-lineup-chip" data-filter="latex">Natural Latex <span class="m-chip-count">2</span></button>
+            <button type="button" class="m-lineup-chip" data-filter="specialty">Specialty <span class="m-chip-count">2</span></button>
+          </div>
+        </div>
+
         <!-- DEDICATED H2 MODEL SECTIONS -->
         <div class="m-models-container">
 
         <!-- MODEL 1: Saatva Classic (FLAGSHIP PICK) -->
-        <article class="m-model-card m-flagship-model-card" id="model-saatva-classic">
+        <article class="m-model-card m-flagship-model-card" id="model-saatva-classic" data-category="hybrid">
           <div class="m-model-head-bar">
             <div class="m-model-head-left">
               <span class="m-flagship-top-badge">★ Flagship Pick</span>
@@ -2080,7 +2317,7 @@
 
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
-                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">11.5" or 14.5" Custom Options</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Plush Soft (3), Luxury Firm (6), Firm (8)</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Support Core:</span><span class="m-model-spec-v">Dual-Coil Tempered Steel & Pocketed Coils</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Lumbar Support:</span><span class="m-model-spec-v">Patented Lumbar Zone® Active Spinal Wire</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
+                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">11.5" or 14.5" Custom Options</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Plush Soft (3), Luxury Firm (6), Firm (8) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 65%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Support Core:</span><span class="m-model-spec-v">Dual-Coil Tempered Steel & Pocketed Coils</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Lumbar Support:</span><span class="m-model-spec-v">Patented Lumbar Zone® Active Spinal Wire</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
 
               <!-- Dual Action CTA Row -->
@@ -2120,7 +2357,7 @@
         </article>
 
         <!-- MODEL 2: Loom & Leaf -->
-        <article class="m-model-card" id="model-loom-and-leaf">
+        <article class="m-model-card" id="model-loom-and-leaf" data-category="foam">
           <div class="m-model-head-bar">
             <div class="m-model-head-left">
               <span class="m-model-category-tag"><svg class="m-type-ic m-type-ic-sm" aria-hidden="true"><use href="#np-ic-memory-foam"/></svg>Premium Memory Foam · Best for Pressure Relief</span>
@@ -2136,7 +2373,7 @@
               
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
-                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">12" Multi-Layer Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Relaxed Firm (6/10) or Firm (8/10)</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Layer:</span><span class="m-model-spec-v">5 lb/cu.ft High-Density Memory Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Cooling Tech:</span><span class="m-model-spec-v">Spinal Cooling Gel Infusion</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
+                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">12" Multi-Layer Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Relaxed Firm (6/10) or Firm (8/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 65%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Layer:</span><span class="m-model-spec-v">5 lb/cu.ft High-Density Memory Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Cooling Tech:</span><span class="m-model-spec-v">Spinal Cooling Gel Infusion</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
 
               <!-- Dual Action CTA Row -->
@@ -2171,7 +2408,7 @@
         </article>
 
         <!-- MODEL 3: Zenhaven -->
-        <article class="m-model-card" id="model-zenhaven">
+        <article class="m-model-card" id="model-zenhaven" data-category="latex">
           <div class="m-model-head-bar">
             <div class="m-model-head-left">
               <span class="m-model-category-tag"><svg class="m-type-ic m-type-ic-sm" aria-hidden="true"><use href="#np-ic-latex-talalay"/></svg>100% Natural Latex · Best 100% Natural Latex</span>
@@ -2187,7 +2424,7 @@
               
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
-                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">10" Flippable Natural Latex</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Flippable: Luxury Plush (4-5) / Gentle Firm (7-8)</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Core Material:</span><span class="m-model-spec-v">100% Natural Talalay Latex Core</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Cover & Barrier:</span><span class="m-model-spec-v">Organic Cotton Cover & Organic New Zealand Wool</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
+                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">10" Flippable Natural Latex</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Flippable: Luxury Plush (4-5) / Gentle Firm (7-8) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 55%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Core Material:</span><span class="m-model-spec-v">100% Natural Talalay Latex Core</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Cover & Barrier:</span><span class="m-model-spec-v">Organic Cotton Cover & Organic New Zealand Wool</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
 
               <!-- Dual Action CTA Row -->
@@ -2222,7 +2459,7 @@
         </article>
 
         <!-- MODEL 4: Saatva Latex Hybrid -->
-        <article class="m-model-card" id="model-saatva-latex-hybrid">
+        <article class="m-model-card" id="model-saatva-latex-hybrid" data-category="latex">
           <div class="m-model-head-bar">
             <div class="m-model-head-left">
               <span class="m-model-category-tag"><svg class="m-type-ic m-type-ic-sm" aria-hidden="true"><use href="#np-ic-hybrid-latex"/></svg>Natural Latex + Coils · Best Natural Hybrid</span>
@@ -2238,7 +2475,7 @@
               
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
-                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">12" Hybrid Design</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Medium Firm (6/10)</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Layer:</span><span class="m-model-spec-v">3" Pure Natural Talalay Latex</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Support Unit:</span><span class="m-model-spec-v">Individually Wrapped Zoned Pocket Coils</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
+                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">12" Hybrid Design</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Medium Firm (6/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 60%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Layer:</span><span class="m-model-spec-v">3" Pure Natural Talalay Latex</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Support Unit:</span><span class="m-model-spec-v">Individually Wrapped Zoned Pocket Coils</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
 
               <!-- Dual Action CTA Row -->
@@ -2273,7 +2510,7 @@
         </article>
 
         <!-- MODEL 5: Saatva Solaire -->
-        <article class="m-model-card" id="model-solaire">
+        <article class="m-model-card" id="model-solaire" data-category="specialty">
           <div class="m-model-head-bar">
             <div class="m-model-head-left">
               <span class="m-model-category-tag"><svg class="m-type-ic m-type-ic-sm" aria-hidden="true"><use href="#np-ic-airbed"/></svg>Adjustable Airbed · Best Adjustable Airbed</span>
@@ -2289,7 +2526,7 @@
               
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
-                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">13" Smart Adjustable Airbed</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">50 Precise Settings (1 to 50)</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Air Chambers:</span><span class="m-model-spec-v">Dual Vulcanized Multi-Chamber Air System</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Topper:</span><span class="m-model-spec-v">5-Zone Talalay Latex & Gel Memory Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · 25-Year Warranty</span></div>
+                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">13" Smart Adjustable Airbed</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">50 Precise Settings (1 to 50) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 50%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Air Chambers:</span><span class="m-model-spec-v">Dual Vulcanized Multi-Chamber Air System</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Topper:</span><span class="m-model-spec-v">5-Zone Talalay Latex & Gel Memory Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · 25-Year Warranty</span></div>
               </div>
 
               <!-- Dual Action CTA Row -->
@@ -2324,7 +2561,7 @@
         </article>
 
         <!-- MODEL 6: Memory Foam Hybrid -->
-        <article class="m-model-card" id="model-memory-foam-hybrid">
+        <article class="m-model-card" id="model-memory-foam-hybrid" data-category="foam">
           <div class="m-model-head-bar">
             <div class="m-model-head-left">
               <span class="m-model-category-tag"><svg class="m-type-ic m-type-ic-sm" aria-hidden="true"><use href="#np-ic-hybrid-foam"/></svg>Memory Foam + Coils · Best Balanced Cushion</span>
@@ -2340,7 +2577,7 @@
               
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
-                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">11.5" Hybrid Profile</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Medium Firm (6/10)</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Layer:</span><span class="m-model-spec-v">AirCradle® Contouring Memory Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Coil System:</span><span class="m-model-spec-v">884 Individually Pocketed Innersprings</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
+                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">11.5" Hybrid Profile</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Medium Firm (6/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 60%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Layer:</span><span class="m-model-spec-v">AirCradle® Contouring Memory Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Coil System:</span><span class="m-model-spec-v">884 Individually Pocketed Innersprings</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
 
               <!-- Dual Action CTA Row -->
@@ -2375,7 +2612,7 @@
         </article>
 
         <!-- MODEL 7: Saatva Contour5 -->
-        <article class="m-model-card" id="model-contour5">
+        <article class="m-model-card" id="model-contour5" data-category="foam">
           <div class="m-model-head-bar">
             <div class="m-model-head-left">
               <span class="m-model-category-tag"><svg class="m-type-ic m-type-ic-sm" aria-hidden="true"><use href="#np-ic-memory-foam"/></svg>Heavy-Conforming Foam · Best Deep Hug</span>
@@ -2391,7 +2628,7 @@
               
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
-                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">12.5" Deep Contouring Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Medium (5/10) or Firm (7/10)</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Design:</span><span class="m-model-spec-v">5-Layer Advanced Viscoelastic Construction</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Cooling Tech:</span><span class="m-model-spec-v">Phase Change Material Thermal Cover</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
+                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">12.5" Deep Contouring Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Medium (5/10) or Firm (7/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 55%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Design:</span><span class="m-model-spec-v">5-Layer Advanced Viscoelastic Construction</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Cooling Tech:</span><span class="m-model-spec-v">Phase Change Material Thermal Cover</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
 
               <!-- Dual Action CTA Row -->
@@ -2426,7 +2663,7 @@
         </article>
 
         <!-- MODEL 8: Saatva RX -->
-        <article class="m-model-card" id="model-saatva-rx">
+        <article class="m-model-card" id="model-saatva-rx" data-category="hybrid">
           <div class="m-model-head-bar">
             <div class="m-model-head-left">
               <span class="m-model-category-tag"><svg class="m-type-ic m-type-ic-sm" aria-hidden="true"><use href="#np-ic-hybrid-foam"/></svg>Therapeutic Support · Best for Back & Joint Pain</span>
@@ -2442,7 +2679,7 @@
               
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
-                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">15" Luxury Medical-Grade Profile</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Supportive Medium Firm (6/10)</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Specialty Tech:</span><span class="m-model-spec-v">Therapeutic Support Core with Micro-Coils</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Lumbar Support:</span><span class="m-model-spec-v">High-Density Foam & Spinal Wire Center</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
+                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">15" Luxury Medical-Grade Profile</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Supportive Medium Firm (6/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 60%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Specialty Tech:</span><span class="m-model-spec-v">Therapeutic Support Core with Micro-Coils</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Lumbar Support:</span><span class="m-model-spec-v">High-Density Foam & Spinal Wire Center</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
 
               <!-- Dual Action CTA Row -->
@@ -2477,7 +2714,7 @@
         </article>
 
         <!-- MODEL 9: Saatva HD -->
-        <article class="m-model-card" id="model-saatva-hd">
+        <article class="m-model-card" id="model-saatva-hd" data-category="hybrid">
           <div class="m-model-head-bar">
             <div class="m-model-head-left">
               <span class="m-model-category-tag"><svg class="m-type-ic m-type-ic-sm" aria-hidden="true"><use href="#np-ic-hybrid-foam"/></svg>Heavy-Duty Hybrid · Best for Heavy Sleepers (300-500 lbs)</span>
@@ -2493,7 +2730,7 @@
               
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
-                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">15.5" Heavy-Duty Profile</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Firm (7-8/10)</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Coil Wire:</span><span class="m-model-spec-v">12.5-Gauge Tempered Steel Support Core</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Layers:</span><span class="m-model-spec-v">5-Zone Talalay Latex & 5 lb Memory Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Weight Capacity:</span><span class="m-model-spec-v">Engineered for 300-500 lbs Per Sleeper</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
+                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">15.5" Heavy-Duty Profile</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Firm (7-8/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 75%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Coil Wire:</span><span class="m-model-spec-v">12.5-Gauge Tempered Steel Support Core</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Layers:</span><span class="m-model-spec-v">5-Zone Talalay Latex & 5 lb Memory Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Weight Capacity:</span><span class="m-model-spec-v">Engineered for 300-500 lbs Per Sleeper</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
 
               <!-- Dual Action CTA Row -->
@@ -2528,7 +2765,7 @@
         </article>
 
         <!-- MODEL 10: Saatva Youth -->
-        <article class="m-model-card" id="model-saatva-youth">
+        <article class="m-model-card" id="model-saatva-youth" data-category="hybrid">
           <div class="m-model-head-bar">
             <div class="m-model-head-left">
               <span class="m-model-category-tag"><svg class="m-type-ic m-type-ic-sm" aria-hidden="true"><use href="#np-ic-kids"/></svg>Flippable Kids Innerspring · Best for Growing Kids</span>
@@ -2544,7 +2781,7 @@
               
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
-                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">10" Dual-Sided Kids Mattress</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Flippable: Ages 3-7 (5/10) / Ages 8-12 (7/10)</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Coil Unit:</span><span class="m-model-spec-v">Dual-Sided Active Innerspring Coils</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Safety Standards:</span><span class="m-model-spec-v">Water-Resistant GOTS Organic Cotton Cover</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
+                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">10" Dual-Sided Kids Mattress</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Flippable: Ages 3-7 (5/10) / Ages 8-12 (7/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 55%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Coil Unit:</span><span class="m-model-spec-v">Dual-Sided Active Innerspring Coils</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Safety Standards:</span><span class="m-model-spec-v">Water-Resistant GOTS Organic Cotton Cover</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
 
               <!-- Dual Action CTA Row -->
@@ -2579,7 +2816,7 @@
         </article>
 
         <!-- MODEL 11: Dual-Sided Crib Mattress -->
-        <article class="m-model-card" id="model-crib-mattress">
+        <article class="m-model-card" id="model-crib-mattress" data-category="specialty">
           <div class="m-model-head-bar">
             <div class="m-model-head-left">
               <span class="m-model-category-tag"><svg class="m-type-ic m-type-ic-sm" aria-hidden="true"><use href="#np-ic-crib"/></svg>Organic Baby & Toddler · Best Organic Crib Bed</span>
@@ -2595,7 +2832,7 @@
               
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
-                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">6" Pediatric Standard</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Flippable: Infant Extra Firm / Toddler Firm</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Certifications:</span><span class="m-model-spec-v">GREENGUARD Gold Certified · GOTS Organic</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Fire Protection:</span><span class="m-model-spec-v">100% Natural Wool (Chemical-Free)</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
+                <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">6" Pediatric Standard</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Flippable: Infant Extra Firm / Toddler Firm <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 85%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Certifications:</span><span class="m-model-spec-v">GREENGUARD Gold Certified · GOTS Organic</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Fire Protection:</span><span class="m-model-spec-v">100% Natural Wool (Chemical-Free)</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
 
               <!-- Dual Action CTA Row -->
@@ -2656,6 +2893,9 @@
           <!-- 1. Latex Pillow -->
           <article class="m-product-card">
             <div>
+              <div class="m-card-img-wrap">
+                <img src="assets/illustrations/saatva_pillow_latex_watercolor.jpg" alt="Saatva Natural Latex Pillow deconstructed architectural watercolor illustration" loading="lazy">
+              </div>
               <div class="m-card-badge-line">
                 <span class="m-card-type-tag">Flagship Pillow</span>
               </div>
@@ -2667,8 +2907,8 @@
                 <div class="m-data-row"><span class="m-data-k">Best For:</span><span class="m-data-v">All Positions</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/latex-pillow">
-              <span>Read Review</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bedding/latex-pillow?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -2676,6 +2916,9 @@
           <!-- 2. Down Alternative -->
           <article class="m-product-card">
             <div>
+              <div class="m-card-img-wrap">
+                <img src="assets/illustrations/saatva_pillow_down_alt_watercolor.jpg" alt="Saatva Down Alternative Pillow deconstructed architectural watercolor illustration" loading="lazy">
+              </div>
               <div class="m-card-badge-line">
                 <span class="m-card-type-tag">Hypoallergenic</span>
               </div>
@@ -2687,8 +2930,8 @@
                 <div class="m-data-row"><span class="m-data-k">Best For:</span><span class="m-data-v">Stomach Sleepers</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/down-alternative-pillow">
-              <span>Read Review</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bedding/down-alternative-pillow?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -2696,6 +2939,9 @@
           <!-- 3. Memory Foam Pillow -->
           <article class="m-product-card">
             <div>
+              <div class="m-card-img-wrap">
+                <img src="assets/illustrations/saatva_pillow_memory_foam_watercolor.jpg" alt="Saatva Memory Foam Pillow deconstructed architectural watercolor illustration" loading="lazy">
+              </div>
               <div class="m-card-badge-line">
                 <span class="m-card-type-tag">Cooling Graphite</span>
               </div>
@@ -2707,8 +2953,8 @@
                 <div class="m-data-row"><span class="m-data-k">Best For:</span><span class="m-data-v">Neck Pain & Side</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/memory-foam-pillow">
-              <span>Read Review</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bedding/memory-foam-pillow?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -2716,6 +2962,9 @@
           <!-- 4. Organic Quilted -->
           <article class="m-product-card">
             <div>
+              <div class="m-card-img-wrap">
+                <img src="assets/illustrations/saatva_pillow_organic_quilted_watercolor.jpg" alt="Saatva Organic Quilted Pillow deconstructed architectural watercolor illustration" loading="lazy">
+              </div>
               <div class="m-card-badge-line">
                 <span class="m-card-type-tag">100% GOTS Pure</span>
               </div>
@@ -2727,8 +2976,8 @@
                 <div class="m-data-row"><span class="m-data-k">Best For:</span><span class="m-data-v">Sensitive Skin</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/organic-quilted-pillow">
-              <span>Read Review</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bedding/organic-quilted-pillow?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -2812,6 +3061,9 @@
           <!-- 1. Organic Percale -->
           <article class="m-product-card">
             <div>
+              <div class="m-card-img-wrap">
+                <img src="assets/illustrations/saatva_bedding_percale_watercolor.jpg" alt="Saatva Organic Percale Sheet Set architectural watercolor illustration" loading="lazy">
+              </div>
               <div class="m-card-badge-line">
                 <span class="m-card-type-tag">Crisp & Cool</span>
               </div>
@@ -2823,8 +3075,8 @@
                 <div class="m-data-row"><span class="m-data-k">Best For:</span><span class="m-data-v">Hot Sleepers</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/organic-percale-sheets">
-              <span>Read Review</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bedding/organic-percale-sheet-set?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -2832,6 +3084,9 @@
           <!-- 2. Belgian Linen -->
           <article class="m-product-card">
             <div>
+              <div class="m-card-img-wrap">
+                <img src="assets/illustrations/saatva_bedding_linen_watercolor.jpg" alt="Saatva Belgian Linen Sheet Set architectural watercolor illustration" loading="lazy">
+              </div>
               <div class="m-card-badge-line">
                 <span class="m-card-type-tag">Heirloom Linen</span>
               </div>
@@ -2843,8 +3098,8 @@
                 <div class="m-data-row"><span class="m-data-k">Best For:</span><span class="m-data-v">All-Year Wear</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/belgian-linen-sheets">
-              <span>Read Review</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bedding/linen-sheet-set?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -2852,6 +3107,9 @@
           <!-- 3. Organic Flannel -->
           <article class="m-product-card">
             <div>
+              <div class="m-card-img-wrap">
+                <img src="assets/illustrations/saatva_bedding_flannel_watercolor.jpg" alt="Saatva Organic Velvet Flannel Sheet Set architectural watercolor illustration" loading="lazy">
+              </div>
               <div class="m-card-badge-line">
                 <span class="m-card-type-tag">Cozy Flannel</span>
               </div>
@@ -2863,8 +3121,8 @@
                 <div class="m-data-row"><span class="m-data-k">Best For:</span><span class="m-data-v">Cold Winter</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/organic-flannel-sheets">
-              <span>Read Review</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bedding/organic-flannel-sheet-set?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -2872,6 +3130,9 @@
           <!-- 4. Diamond Comforter -->
           <article class="m-product-card">
             <div>
+              <div class="m-card-img-wrap">
+                <img src="assets/illustrations/saatva_bedding_comforter_watercolor.jpg" alt="Saatva Diamond Quilted All-Season Duvet Comforter architectural watercolor illustration" loading="lazy">
+              </div>
               <div class="m-card-badge-line">
                 <span class="m-card-type-tag">All-Season Duvet</span>
               </div>
@@ -2883,8 +3144,8 @@
                 <div class="m-data-row"><span class="m-data-k">Weight:</span><span class="m-data-v">All-Season</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/diamond-quilted-comforter">
-              <span>Read Review</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bedding/diamond-quilted-comforter?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -2930,8 +3191,8 @@
                 <div class="m-data-row"><span class="m-data-k">Straps:</span><span class="m-data-v">Corner Anchor Straps</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/graphite-memory-foam-topper">
-              <span>View Topper Specs</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bedding/graphite-memory-foam-topper?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -2953,8 +3214,8 @@
                 <div class="m-data-row"><span class="m-data-k">Safety:</span><span class="m-data-v">OEKO-TEX Certified</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/natural-latex-topper">
-              <span>View Topper Specs</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bedding/natural-latex-topper?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -2976,8 +3237,8 @@
                 <div class="m-data-row"><span class="m-data-k">Cover:</span><span class="m-data-v">Organic Cotton</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/high-density-foam-topper">
-              <span>View Topper Specs</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bedding/high-density-foam-topper?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -2999,8 +3260,8 @@
                 <div class="m-data-row"><span class="m-data-k">Fit:</span><span class="m-data-v">16" Stretch Skirt</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/waterproof-mattress-protector">
-              <span>View Protector Specs</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bedding/waterproof-mattress-protector?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -3022,8 +3283,8 @@
                 <div class="m-data-row"><span class="m-data-k">Capacity:</span><span class="m-data-v">850 lbs Heavy-Duty</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/adjustable-base-plus">
-              <span>View Base Specs</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bases/adjustable-base-plus?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -3045,8 +3306,8 @@
                 <div class="m-data-row"><span class="m-data-k">Warranty:</span><span class="m-data-v">10-Year Protection</span></div>
               </div>
             </div>
-            <a class="m-card-btn-action" href="/reviews/saatva/foundation">
-              <span>View Foundation Specs</span>
+            <a class="m-card-btn-action" href="https://www.saatva.com/bases/foundation?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+              <span>Check Price ($600 Off) ↗</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </article>
@@ -3176,73 +3437,216 @@
   </footer>
 
 
+  <!-- MOBILE FLOATING QUICK-JUMP PILL & DRAWER -->
+  <aside id="mobileQuickJumpWrap" aria-label="Mobile jump navigation">
+    <button type="button" id="mobileQuickJump" class="m-mobile-jump-btn" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobileDrawerSheet">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <span>Browse Lineup ▾</span>
+    </button>
+  </aside>
+
+  <div id="mobileDrawerBackdrop" class="m-drawer-backdrop" aria-hidden="true"></div>
+  <div id="mobileDrawerSheet" class="m-drawer-sheet" role="dialog" aria-modal="true" aria-label="Saatva lineup directory">
+    <div class="m-drawer-drag-handle" aria-hidden="true"></div>
+    <div class="m-drawer-header">
+      <h3 class="m-drawer-title">Saatva Brand Directory</h3>
+      <button type="button" id="mobileDrawerClose" class="m-drawer-close-btn" aria-label="Close lineup directory">✕</button>
+    </div>
+    <div class="m-drawer-body">
+      <div class="m-drawer-group">
+        <div class="m-drawer-group-title">Mattresses (11 Models)</div>
+        <div class="m-drawer-links">
+          <a class="m-drawer-link" href="#saatva-classic">1. Saatva Classic (Flagship)</a>
+          <a class="m-drawer-link" href="#loom-and-leaf">2. Loom & Leaf (Foam)</a>
+          <a class="m-drawer-link" href="#zenhaven">3. Zenhaven (Latex)</a>
+          <a class="m-drawer-link" href="#saatva-latex-hybrid">4. Saatva Latex Hybrid</a>
+          <a class="m-drawer-link" href="#solaire">5. Saatva Solaire (Airbed)</a>
+          <a class="m-drawer-link" href="#memory-foam-hybrid">6. Memory Foam Hybrid</a>
+          <a class="m-drawer-link" href="#contour5">7. Saatva Contour5</a>
+          <a class="m-drawer-link" href="#saatva-rx">8. Saatva RX (Therapeutic)</a>
+          <a class="m-drawer-link" href="#saatva-hd">9. Saatva HD (Heavy-Duty)</a>
+          <a class="m-drawer-link" href="#saatva-youth">10. Saatva Youth (Kids)</a>
+          <a class="m-drawer-link" href="#crib-mattress">11. Dual-Sided Crib</a>
+        </div>
+      </div>
+      <div class="m-drawer-group">
+        <div class="m-drawer-group-title">Pillows (4 Models)</div>
+        <div class="m-drawer-links">
+          <a class="m-drawer-link" href="#pillows">Saatva Latex, Down Alt, Foam & Quilted</a>
+        </div>
+      </div>
+      <div class="m-drawer-group">
+        <div class="m-drawer-group-title">Sheets & Bedding (5 Sets)</div>
+        <div class="m-drawer-links">
+          <a class="m-drawer-link" href="#sheets">Organic Sateen, Percale, Linen, Flannel & Duvet</a>
+        </div>
+      </div>
+      <div class="m-drawer-group">
+        <div class="m-drawer-group-title">Accessories & Bases (6 Models)</div>
+        <div class="m-drawer-links">
+          <a class="m-drawer-link" href="#accessories">Toppers, Protectors, Bases & Foundations</a>
+        </div>
+      </div>
+      <div class="m-drawer-group">
+        <div class="m-drawer-group-title">Company Lineage</div>
+        <div class="m-drawer-links">
+          <a class="m-drawer-link" href="#lineage">Factory Network & Ownership Truth</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     // Universal Model Comparison Table Sorting & Filtering Logic
     document.addEventListener('DOMContentLoaded', () => {
       const table = document.getElementById('saatva-model-table');
-      if (!table) return;
-      const tbody = table.querySelector('tbody');
-      const rows = Array.from(tbody.querySelectorAll('tr'));
-      const filterBtns = document.querySelectorAll('.m-filter-btn');
-      const headers = table.querySelectorAll('th.sortable');
+      if (table) {
+        const tbody = table.querySelector('tbody');
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        const filterBtns = document.querySelectorAll('.m-filter-btn');
+        const headers = table.querySelectorAll('th.sortable');
 
-      // 1. Category Filtering
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          filterBtns.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          const filter = btn.getAttribute('data-filter');
+        // 1. Category Filtering
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.getAttribute('data-filter');
 
-          rows.forEach(row => {
-            const cat = row.getAttribute('data-category');
-            if (filter === 'all' || cat === filter) {
-              row.style.display = '';
+            rows.forEach(row => {
+              const cat = row.getAttribute('data-category');
+              if (filter === 'all' || cat === filter) {
+                row.style.display = '';
+              } else {
+                row.style.display = 'none';
+              }
+            });
+          });
+        });
+
+        // 2. Column Sorting (Ascending / Descending)
+        let currentSortCol = null;
+        let currentSortAsc = true;
+
+        headers.forEach(th => {
+          th.addEventListener('click', () => {
+            const col = th.getAttribute('data-col');
+            const isNumeric = th.getAttribute('data-type') === 'numeric';
+
+            if (currentSortCol === col) {
+              currentSortAsc = !currentSortAsc;
             } else {
-              row.style.display = 'none';
+              currentSortCol = col;
+              currentSortAsc = true;
+            }
+
+            headers.forEach(h => h.classList.remove('asc', 'desc'));
+            th.classList.add(currentSortAsc ? 'asc' : 'desc');
+
+            const visibleRows = Array.from(tbody.querySelectorAll('tr'));
+            visibleRows.sort((a, b) => {
+              let valA = a.getAttribute('data-' + col);
+              let valB = b.getAttribute('data-' + col);
+
+              if (isNumeric) {
+                valA = parseFloat(valA) || 0;
+                valB = parseFloat(valB) || 0;
+                return currentSortAsc ? valA - valB : valB - valA;
+              } else {
+                valA = (valA || '').toLowerCase();
+                valB = (valB || '').toLowerCase();
+                if (valA < valB) return currentSortAsc ? -1 : 1;
+                if (valA > valB) return currentSortAsc ? 1 : -1;
+                return 0;
+              }
+            });
+
+            visibleRows.forEach(r => tbody.appendChild(r));
+          });
+        });
+      }
+
+      // 3. Lineup Filter Chips Filtering Logic
+      const lineupChips = document.querySelectorAll('.m-lineup-chip');
+      const modelCards = document.querySelectorAll('.m-models-container .m-model-card');
+      lineupChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          lineupChips.forEach(c => c.classList.remove('active'));
+          chip.classList.add('active');
+          const filter = chip.getAttribute('data-filter');
+
+          modelCards.forEach(card => {
+            const cat = card.getAttribute('data-category');
+            if (filter === 'all' || cat === filter) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
             }
           });
         });
       });
 
-      // 2. Column Sorting (Ascending / Descending)
-      let currentSortCol = null;
-      let currentSortAsc = true;
+      // 4. Sticky Subnav Dynamic Scrollspy (IntersectionObserver)
+      const subnavPills = document.querySelectorAll('.m-sticky-subnav .m-subnav-pill');
+      const spySections = ['mattresses', 'pillows', 'sheets', 'accessories', 'lineage']
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
 
-      headers.forEach(th => {
-        th.addEventListener('click', () => {
-          const col = th.getAttribute('data-col');
-          const isNumeric = th.getAttribute('data-type') === 'numeric';
-
-          if (currentSortCol === col) {
-            currentSortAsc = !currentSortAsc;
-          } else {
-            currentSortCol = col;
-            currentSortAsc = true;
-          }
-
-          headers.forEach(h => h.classList.remove('asc', 'desc'));
-          th.classList.add(currentSortAsc ? 'asc' : 'desc');
-
-          const visibleRows = Array.from(tbody.querySelectorAll('tr'));
-          visibleRows.sort((a, b) => {
-            let valA = a.getAttribute('data-' + col);
-            let valB = b.getAttribute('data-' + col);
-
-            if (isNumeric) {
-              valA = parseFloat(valA) || 0;
-              valB = parseFloat(valB) || 0;
-              return currentSortAsc ? valA - valB : valB - valA;
-            } else {
-              valA = (valA || '').toLowerCase();
-              valB = (valB || '').toLowerCase();
-              if (valA < valB) return currentSortAsc ? -1 : 1;
-              if (valA > valB) return currentSortAsc ? 1 : -1;
-              return 0;
+      if ('IntersectionObserver' in window && spySections.length > 0) {
+        const observerOptions = {
+          root: null,
+          rootMargin: '-20% 0px -65% 0px',
+          threshold: 0
+        };
+        const sectionObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const id = entry.target.id;
+              subnavPills.forEach(pill => {
+                if (pill.getAttribute('href') === `#${id}`) {
+                  pill.classList.add('active');
+                } else {
+                  pill.classList.remove('active');
+                }
+              });
             }
           });
+        }, observerOptions);
 
-          visibleRows.forEach(r => tbody.appendChild(r));
-        });
+        spySections.forEach(sec => sectionObserver.observe(sec));
+      }
+
+      // 5. Mobile Quick-Jump Floating Drawer Logic
+      const jumpBtn = document.getElementById('mobileQuickJump');
+      const drawerBackdrop = document.getElementById('mobileDrawerBackdrop');
+      const drawerSheet = document.getElementById('mobileDrawerSheet');
+      const drawerClose = document.getElementById('mobileDrawerClose');
+      const drawerLinks = document.querySelectorAll('.m-drawer-link');
+
+      function openDrawer() {
+        if (!drawerSheet || !drawerBackdrop) return;
+        drawerBackdrop.classList.add('active');
+        drawerSheet.classList.add('active');
+        if (jumpBtn) jumpBtn.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        if (!drawerSheet || !drawerBackdrop) return;
+        drawerBackdrop.classList.remove('active');
+        drawerSheet.classList.remove('active');
+        if (jumpBtn) jumpBtn.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
+      if (jumpBtn) jumpBtn.addEventListener('click', openDrawer);
+      if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
+      if (drawerClose) drawerClose.addEventListener('click', closeDrawer);
+      drawerLinks.forEach(link => {
+        link.addEventListener('click', closeDrawer);
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeDrawer();
       });
     });
   </script>
