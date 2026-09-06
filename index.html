@@ -612,8 +612,8 @@
     }
     .m-flagship-grid {
       display: grid;
-      grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
-      gap: 40px;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 36px;
       align-items: start;
     }
     .m-flagship-hgroup {
@@ -719,6 +719,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
+      margin-bottom: 20px;
     }
     .m-spec-metric-cell {
       background: var(--canvas-subtle);
@@ -1229,13 +1230,13 @@
       margin-bottom: 14px;
     }
     .m-model-illo {
-      max-width: 520px;
       width: 100%;
+      max-width: 100%;
       aspect-ratio: 16 / 9;
       background: var(--canvas-subtle);
       border: 1px solid var(--line);
       border-radius: var(--radius-md);
-      margin: 16px 0 24px;
+      margin: 0 0 20px;
       overflow: hidden;
       box-shadow: var(--shadow-sm);
     }
@@ -1251,7 +1252,7 @@
     }
     .m-model-grid {
       display: grid;
-      grid-template-columns: minmax(0, 64fr) minmax(0, 36fr);
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 36px;
       align-items: start;
     }
@@ -1852,7 +1853,7 @@
       }
       .m-model-illo {
         max-width: 100%;
-        margin: 12px 0 18px;
+        margin: 0 0 16px;
       }
     }
 
@@ -2381,16 +2382,15 @@
           </div>
 
           <h2 class="m-model-h2" id="saatva-classic">1. Saatva Classic Mattress Review</h2>
-          <div class="m-model-illo" role="img" aria-label="Saatva Classic architectural watercolor cutaway">
-            <img src="assets/illustrations/saatva_classic_watercolor.jpg" alt="Saatva Classic Architectural Watercolor Cutaway" loading="lazy">
-          </div>
           
           <div class="m-flagship-grid" style="margin-top: 20px;">
             <div>
-              <p class="m-model-lede">Saatva’s flagship luxury hybrid innerspring mattress, built with a dual-coil system that pairs 884 contouring pocket coils with 416 tempered steel support coils. Topped with a 3-inch organic cotton Euro pillow top and patented Lumbar Zone active spinal wire, it delivers the responsive support of a traditional hotel bed with pressure-relieving cushioning. Available in two profile heights and three firmness levels to fit virtually any sleep style.</p>
-              
+              <div class="m-model-illo" role="img" aria-label="Saatva Classic architectural watercolor cutaway">
+                <img src="assets/illustrations/saatva_classic_watercolor.jpg" alt="Saatva Classic Architectural Watercolor Cutaway" loading="lazy">
+              </div>
+
               <!-- Layer Cutaway Dissection -->
-              <div class="m-flagship-layers" style="margin: 24px 0;">
+              <div class="m-flagship-layers" style="margin: 0 0 20px;">
                 <div class="m-flagship-layer-item">
                   <span class="m-layer-letter">A</span>
                   <div class="m-layer-text"><strong>3" Euro Pillow Top:</strong> <span>100% GOTS organic cotton with Guardin® botanical antimicrobial treatment.</span></div>
@@ -2408,10 +2408,38 @@
                   <div class="m-layer-text"><strong>416 Tempered Steel Base Coils:</strong> <span>13-gauge connected coils prevent sagging and ensure decades of structural durability.</span></div>
                 </div>
               </div>
+            </div>
+
+            <!-- Right Column -->
+            <div>
+              <p class="m-model-lede">Saatva’s flagship luxury hybrid innerspring mattress, built with a dual-coil system that pairs 884 contouring pocket coils with 416 tempered steel support coils. Topped with a 3-inch organic cotton Euro pillow top and patented Lumbar Zone active spinal wire, it delivers the responsive support of a traditional hotel bed with pressure-relieving cushioning. Available in two profile heights and three firmness levels to fit virtually any sleep style.</p>
 
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
                 <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">11.5" or 14.5" Custom Options</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Plush Soft (3), Luxury Firm (6), Firm (8) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 65%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Support Core:</span><span class="m-model-spec-v">Dual-Coil Tempered Steel & Pocketed Coils</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Lumbar Support:</span><span class="m-model-spec-v">Patented Lumbar Zone® Active Spinal Wire</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
+              </div>
+
+              <!-- Quick Metrics & Flagship Highlights -->
+
+
+              <div class="m-model-sidebar-card" style="margin-bottom: 24px;">
+                <div class="m-model-sidebar-box">
+                  <div class="m-model-sidebar-head">
+                    <strong>Why Choose the Flagship?</strong>
+                  </div>
+                  <ul class="m-model-pro-list">
+                    <li><strong>Target Match:</strong> Combination Sleepers, Lumbar Relief, Hotel Feel</li>
+                    <li><strong>Dual-Coil Core:</strong> 884 contouring pocket coils + 416 tempered steel coils</li>
+                    <li><strong>Active Lumbar Zone:</strong> Patented spinal wire + high-density center third</li>
+                    <li><strong>White-Glove Delivery:</strong> Free in-room delivery, setup, & mattress removal</li>
+                    <li><strong>Risk-Free Trial:</strong> 365 nights at home with lifetime warranty</li>
+                  </ul>
+                  <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line);">
+                    <a class="m-direct-store-link" href="https://www.saatva.com/mattresses/saatva-classic?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+                      <span>Direct to Saatva Store Page ↗</span>
+                    </a>
+                  </div>
+                </div>
               </div>
 
               <!-- Dual Action CTA Row -->
@@ -2423,28 +2451,6 @@
                 <a class="m-btn-secondary-ink" href="/reviews/saatva/saatva-classic">
                   <span>Read Full In-Depth Review →</span>
                 </a>
-              </div>
-            </div>
-
-            <!-- Quick Metrics & Flagship Highlights -->
-            <div class="m-flagship-visual">
-
-              <div class="m-model-sidebar-card" style="margin-top: 14px;">
-                <div class="m-model-sidebar-head">
-                  <strong>Why Choose the Flagship?</strong>
-                </div>
-                <ul class="m-model-pro-list">
-                  <li><strong>Target Match:</strong> Combination Sleepers, Lumbar Relief, Hotel Feel</li>
-                  <li><strong>Dual-Coil Core:</strong> 884 contouring pocket coils + 416 tempered steel coils</li>
-                  <li><strong>Active Lumbar Zone:</strong> Patented spinal wire + high-density center third</li>
-                  <li><strong>White-Glove Delivery:</strong> Free in-room delivery, setup, & mattress removal</li>
-                  <li><strong>Risk-Free Trial:</strong> 365 nights at home with lifetime warranty</li>
-                </ul>
-                <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line);">
-                  <a class="m-direct-store-link" href="https://www.saatva.com/mattresses/saatva-classic?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-                    <span>Direct to Saatva Store Page ↗</span>
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -2459,30 +2465,20 @@
           </div>
 
           <h2 class="m-model-h2" id="loom-and-leaf">2. Loom & Leaf Mattress Review</h2>
-          <div class="m-model-illo" role="img" aria-label="Loom & Leaf architectural watercolor cutaway"><img src="assets/illustrations/loom_and_leaf_watercolor.jpg" alt="Loom & Leaf Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
-              <p class="m-model-lede">An ultra-dense memory foam mattress designed to deliver contouring pressure relief without the trapped heat or sinking feeling of traditional foam. It features a multi-layer stack of 5 lb/cu.ft viscoelastic memory foam paired with a cooling spinal gel pad that actively dissipates body heat. Perfect for side and back sleepers seeking restorative joint cushioning and near-zero motion transfer.</p>
-              
+              <div class="m-model-illo" role="img" aria-label="Loom & Leaf architectural watercolor cutaway"><img src="assets/illustrations/loom_and_leaf_watercolor.jpg" alt="Loom & Leaf Architectural Watercolor Cutaway" loading="lazy"></div>
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
                 <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">12" Multi-Layer Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Relaxed Firm (6/10) or Firm (8/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 65%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Layer:</span><span class="m-model-spec-v">5 lb/cu.ft High-Density Memory Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Cooling Tech:</span><span class="m-model-spec-v">Spinal Cooling Gel Infusion</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
-
-              <!-- Dual Action CTA Row -->
-              <div class="m-model-cta-row">
-                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/loom-and-leaf?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-                  <span>Check Loom & Leaf Price ($600 Off) ↗</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-                <a class="m-btn-secondary-ink" href="/reviews/saatva/loom-and-leaf">
-                  <span>Read Full In-Depth Review →</span>
-                </a>
-              </div>
             </div>
 
-            <div class="m-model-sidebar-card">
+            <div>
+              <p class="m-model-lede">An ultra-dense memory foam mattress designed to deliver contouring pressure relief without the trapped heat or sinking feeling of traditional foam. It features a multi-layer stack of 5 lb/cu.ft viscoelastic memory foam paired with a cooling spinal gel pad that actively dissipates body heat. Perfect for side and back sleepers seeking restorative joint cushioning and near-zero motion transfer.</p>
+
+              <div class="m-model-sidebar-card" style="margin-bottom: 24px;">
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2498,6 +2494,18 @@
               </div>
             </div>
             </div>
+
+              <!-- Dual Action CTA Row -->
+              <div class="m-model-cta-row">
+                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/loom-and-leaf?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+                  <span>Check Loom & Leaf Price ($600 Off) ↗</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a class="m-btn-secondary-ink" href="/reviews/saatva/loom-and-leaf">
+                  <span>Read Full In-Depth Review →</span>
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -2510,30 +2518,20 @@
           </div>
 
           <h2 class="m-model-h2" id="zenhaven">3. Zenhaven Mattress Review</h2>
-          <div class="m-model-illo" role="img" aria-label="Zenhaven architectural watercolor cutaway"><img src="assets/illustrations/zenhaven_watercolor.jpg" alt="Zenhaven Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
-              <p class="m-model-lede">A dual-sided flippable mattress made entirely from pure, sustainably harvested Talalay latex with zero polyurethane foams. One side offers a buoyant Luxury Plush feel (4-5/10) tailored for side sleepers, while flipping the mattress reveals a supportive Gentle Firm feel (7-8/10) for back and stomach sleepers. Naturally hypoallergenic, resistant to dust mites, and inherently cooling due to open-cell airflow pinholes.</p>
-              
+              <div class="m-model-illo" role="img" aria-label="Zenhaven architectural watercolor cutaway"><img src="assets/illustrations/zenhaven_watercolor.jpg" alt="Zenhaven Architectural Watercolor Cutaway" loading="lazy"></div>
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
                 <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">10" Flippable Natural Latex</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Flippable: Luxury Plush (4-5) / Gentle Firm (7-8) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 55%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Core Material:</span><span class="m-model-spec-v">100% Natural Talalay Latex Core</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Cover & Barrier:</span><span class="m-model-spec-v">Organic Cotton Cover & Organic New Zealand Wool</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
-
-              <!-- Dual Action CTA Row -->
-              <div class="m-model-cta-row">
-                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/zenhaven?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-                  <span>Check Zenhaven Price ($600 Off) ↗</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-                <a class="m-btn-secondary-ink" href="/reviews/saatva/zenhaven">
-                  <span>Read Full In-Depth Review →</span>
-                </a>
-              </div>
             </div>
 
-            <div class="m-model-sidebar-card">
+            <div>
+              <p class="m-model-lede">A dual-sided flippable mattress made entirely from pure, sustainably harvested Talalay latex with zero polyurethane foams. One side offers a buoyant Luxury Plush feel (4-5/10) tailored for side sleepers, while flipping the mattress reveals a supportive Gentle Firm feel (7-8/10) for back and stomach sleepers. Naturally hypoallergenic, resistant to dust mites, and inherently cooling due to open-cell airflow pinholes.</p>
+
+              <div class="m-model-sidebar-card" style="margin-bottom: 24px;">
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2549,6 +2547,18 @@
               </div>
             </div>
             </div>
+
+              <!-- Dual Action CTA Row -->
+              <div class="m-model-cta-row">
+                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/zenhaven?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+                  <span>Check Zenhaven Price ($600 Off) ↗</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a class="m-btn-secondary-ink" href="/reviews/saatva/zenhaven">
+                  <span>Read Full In-Depth Review →</span>
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -2561,30 +2571,20 @@
           </div>
 
           <h2 class="m-model-h2" id="saatva-latex-hybrid">4. Saatva Latex Hybrid Mattress Review</h2>
-          <div class="m-model-illo" role="img" aria-label="Saatva Latex Hybrid architectural watercolor cutaway"><img src="assets/illustrations/saatva_latex_hybrid_watercolor.jpg" alt="Saatva Latex Hybrid Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
-              <p class="m-model-lede">Combines the uplifting buoyancy of 3 inches of natural Talalay latex with a responsive pocketed innerspring coil system. Zoned pocket coils provide firmer support under the lumbar region while gently contouring shoulders and hips to promote neutral spinal alignment. Wrapped in certified organic cotton and pure wool, it provides durable edge-to-edge support with naturally breathable temperature regulation.</p>
-              
+              <div class="m-model-illo" role="img" aria-label="Saatva Latex Hybrid architectural watercolor cutaway"><img src="assets/illustrations/saatva_latex_hybrid_watercolor.jpg" alt="Saatva Latex Hybrid Architectural Watercolor Cutaway" loading="lazy"></div>
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
                 <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">12" Hybrid Design</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Medium Firm (6/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 60%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Layer:</span><span class="m-model-spec-v">3" Pure Natural Talalay Latex</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Support Unit:</span><span class="m-model-spec-v">Individually Wrapped Zoned Pocket Coils</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
-
-              <!-- Dual Action CTA Row -->
-              <div class="m-model-cta-row">
-                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/saatva-latex-hybrid?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-                  <span>Check Saatva Latex Hybrid Price ($600 Off) ↗</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-                <a class="m-btn-secondary-ink" href="/reviews/saatva/saatva-latex-hybrid">
-                  <span>Read Full In-Depth Review →</span>
-                </a>
-              </div>
             </div>
 
-            <div class="m-model-sidebar-card">
+            <div>
+              <p class="m-model-lede">Combines the uplifting buoyancy of 3 inches of natural Talalay latex with a responsive pocketed innerspring coil system. Zoned pocket coils provide firmer support under the lumbar region while gently contouring shoulders and hips to promote neutral spinal alignment. Wrapped in certified organic cotton and pure wool, it provides durable edge-to-edge support with naturally breathable temperature regulation.</p>
+
+              <div class="m-model-sidebar-card" style="margin-bottom: 24px;">
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2600,6 +2600,18 @@
               </div>
             </div>
             </div>
+
+              <!-- Dual Action CTA Row -->
+              <div class="m-model-cta-row">
+                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/saatva-latex-hybrid?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+                  <span>Check Saatva Latex Hybrid Price ($600 Off) ↗</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a class="m-btn-secondary-ink" href="/reviews/saatva/saatva-latex-hybrid">
+                  <span>Read Full In-Depth Review →</span>
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -2612,30 +2624,20 @@
           </div>
 
           <h2 class="m-model-h2" id="solaire">5. Saatva Solaire Mattress Review</h2>
-          <div class="m-model-illo" role="img" aria-label="Saatva Solaire architectural watercolor cutaway"><img src="assets/illustrations/solaire_watercolor.jpg" alt="Saatva Solaire Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
-              <p class="m-model-lede">A luxury smart airbed featuring 50 micro-adjustable firmness settings per side, easily adjusted via quiet digital remotes. Dual air chambers on Queen and King sizes allow partners to dial in their personal comfort without compromise. Beneath the organic cotton Euro pillow top, five-zone Talalay latex and contouring gel memory foam cushion the air chambers for a seamless luxury feel without surface seams.</p>
-              
+              <div class="m-model-illo" role="img" aria-label="Saatva Solaire architectural watercolor cutaway"><img src="assets/illustrations/solaire_watercolor.jpg" alt="Saatva Solaire Architectural Watercolor Cutaway" loading="lazy"></div>
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
                 <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">13" Smart Adjustable Airbed</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">50 Precise Settings (1 to 50) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 50%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Air Chambers:</span><span class="m-model-spec-v">Dual Vulcanized Multi-Chamber Air System</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Topper:</span><span class="m-model-spec-v">5-Zone Talalay Latex & Gel Memory Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · 25-Year Warranty</span></div>
               </div>
-
-              <!-- Dual Action CTA Row -->
-              <div class="m-model-cta-row">
-                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/solaire?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-                  <span>Check Saatva Solaire Price ($600 Off) ↗</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-                <a class="m-btn-secondary-ink" href="/reviews/saatva/solaire">
-                  <span>Read Full In-Depth Review →</span>
-                </a>
-              </div>
             </div>
 
-            <div class="m-model-sidebar-card">
+            <div>
+              <p class="m-model-lede">A luxury smart airbed featuring 50 micro-adjustable firmness settings per side, easily adjusted via quiet digital remotes. Dual air chambers on Queen and King sizes allow partners to dial in their personal comfort without compromise. Beneath the organic cotton Euro pillow top, five-zone Talalay latex and contouring gel memory foam cushion the air chambers for a seamless luxury feel without surface seams.</p>
+
+              <div class="m-model-sidebar-card" style="margin-bottom: 24px;">
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2651,6 +2653,18 @@
               </div>
             </div>
             </div>
+
+              <!-- Dual Action CTA Row -->
+              <div class="m-model-cta-row">
+                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/solaire?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+                  <span>Check Saatva Solaire Price ($600 Off) ↗</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a class="m-btn-secondary-ink" href="/reviews/saatva/solaire">
+                  <span>Read Full In-Depth Review →</span>
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -2663,30 +2677,20 @@
           </div>
 
           <h2 class="m-model-h2" id="memory-foam-hybrid">6. Memory Foam Hybrid Mattress Review</h2>
-          <div class="m-model-illo" role="img" aria-label="Memory Foam Hybrid architectural watercolor cutaway"><img src="assets/illustrations/memory_foam_hybrid_watercolor.jpg" alt="Memory Foam Hybrid Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
-              <p class="m-model-lede">Engineered for sleepers who want the contouring pressure relief of high-grade memory foam with the responsive pushback of pocketed coils. Its AirCradle memory foam hugs pressure points while the 884-coil support unit prevents you from feeling stuck when turning over. An active foam lumbar band reinforces spinal alignment, making it an excellent choice for couples and back/side combination sleepers.</p>
-              
+              <div class="m-model-illo" role="img" aria-label="Memory Foam Hybrid architectural watercolor cutaway"><img src="assets/illustrations/memory_foam_hybrid_watercolor.jpg" alt="Memory Foam Hybrid Architectural Watercolor Cutaway" loading="lazy"></div>
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
                 <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">11.5" Hybrid Profile</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Medium Firm (6/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 60%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Layer:</span><span class="m-model-spec-v">AirCradle® Contouring Memory Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Coil System:</span><span class="m-model-spec-v">884 Individually Pocketed Innersprings</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
-
-              <!-- Dual Action CTA Row -->
-              <div class="m-model-cta-row">
-                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/memory-foam-hybrid?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-                  <span>Check Memory Foam Hybrid Price ($600 Off) ↗</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-                <a class="m-btn-secondary-ink" href="/reviews/saatva/memory-foam-hybrid">
-                  <span>Read Full In-Depth Review →</span>
-                </a>
-              </div>
             </div>
 
-            <div class="m-model-sidebar-card">
+            <div>
+              <p class="m-model-lede">Engineered for sleepers who want the contouring pressure relief of high-grade memory foam with the responsive pushback of pocketed coils. Its AirCradle memory foam hugs pressure points while the 884-coil support unit prevents you from feeling stuck when turning over. An active foam lumbar band reinforces spinal alignment, making it an excellent choice for couples and back/side combination sleepers.</p>
+
+              <div class="m-model-sidebar-card" style="margin-bottom: 24px;">
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2702,6 +2706,18 @@
               </div>
             </div>
             </div>
+
+              <!-- Dual Action CTA Row -->
+              <div class="m-model-cta-row">
+                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/memory-foam-hybrid?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+                  <span>Check Memory Foam Hybrid Price ($600 Off) ↗</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a class="m-btn-secondary-ink" href="/reviews/saatva/memory-foam-hybrid">
+                  <span>Read Full In-Depth Review →</span>
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -2714,30 +2730,20 @@
           </div>
 
           <h2 class="m-model-h2" id="contour5">7. Saatva Contour5 Mattress Review</h2>
-          <div class="m-model-illo" role="img" aria-label="Saatva Contour5 architectural watercolor cutaway"><img src="assets/illustrations/contour5_watercolor.jpg" alt="Saatva Contour5 Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
-              <p class="m-model-lede">An ultra-conforming all-foam mattress crafted for sleepers seeking deep body-contouring relief and zero motion transfer. Five distinct foam layers include a ventilated memory foam layer and Phase Change Material cooling fabric to keep heat moving away from the surface. Available in Medium and Firm options, it cushions shoulders and hips while stabilizing spinal posture throughout the night.</p>
-              
+              <div class="m-model-illo" role="img" aria-label="Saatva Contour5 architectural watercolor cutaway"><img src="assets/illustrations/contour5_watercolor.jpg" alt="Saatva Contour5 Architectural Watercolor Cutaway" loading="lazy"></div>
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
                 <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">12.5" Deep Contouring Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Medium (5/10) or Firm (7/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 55%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Design:</span><span class="m-model-spec-v">5-Layer Advanced Viscoelastic Construction</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Cooling Tech:</span><span class="m-model-spec-v">Phase Change Material Thermal Cover</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
-
-              <!-- Dual Action CTA Row -->
-              <div class="m-model-cta-row">
-                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/contour5?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-                  <span>Check Saatva Contour5 Price ($600 Off) ↗</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-                <a class="m-btn-secondary-ink" href="/reviews/saatva/contour5">
-                  <span>Read Full In-Depth Review →</span>
-                </a>
-              </div>
             </div>
 
-            <div class="m-model-sidebar-card">
+            <div>
+              <p class="m-model-lede">An ultra-conforming all-foam mattress crafted for sleepers seeking deep body-contouring relief and zero motion transfer. Five distinct foam layers include a ventilated memory foam layer and Phase Change Material cooling fabric to keep heat moving away from the surface. Available in Medium and Firm options, it cushions shoulders and hips while stabilizing spinal posture throughout the night.</p>
+
+              <div class="m-model-sidebar-card" style="margin-bottom: 24px;">
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2753,6 +2759,18 @@
               </div>
             </div>
             </div>
+
+              <!-- Dual Action CTA Row -->
+              <div class="m-model-cta-row">
+                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/contour5?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+                  <span>Check Saatva Contour5 Price ($600 Off) ↗</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a class="m-btn-secondary-ink" href="/reviews/saatva/contour5">
+                  <span>Read Full In-Depth Review →</span>
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -2765,30 +2783,20 @@
           </div>
 
           <h2 class="m-model-h2" id="saatva-rx">8. Saatva RX Mattress Review</h2>
-          <div class="m-model-illo" role="img" aria-label="Saatva RX architectural watercolor cutaway"><img src="assets/illustrations/saatva_rx_watercolor.jpg" alt="Saatva RX Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
-              <p class="m-model-lede">Specially designed for sleepers living with chronic lower back pain, sciatica, arthritis, and joint stiffness. Its patent-pending Therapeutic Support Core features micro-coil modules embedded between resilient foam layers to adapt micro-dynamically to every movement. The supportive, buoyant feel relieves pressure without requiring extra muscle effort to change positions or get out of bed in the morning.</p>
-              
+              <div class="m-model-illo" role="img" aria-label="Saatva RX architectural watercolor cutaway"><img src="assets/illustrations/saatva_rx_watercolor.jpg" alt="Saatva RX Architectural Watercolor Cutaway" loading="lazy"></div>
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
                 <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">15" Luxury Medical-Grade Profile</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Supportive Medium Firm (6/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 60%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Specialty Tech:</span><span class="m-model-spec-v">Therapeutic Support Core with Micro-Coils</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Lumbar Support:</span><span class="m-model-spec-v">High-Density Foam & Spinal Wire Center</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
-
-              <!-- Dual Action CTA Row -->
-              <div class="m-model-cta-row">
-                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/saatva-rx?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-                  <span>Check Saatva RX Price ($600 Off) ↗</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-                <a class="m-btn-secondary-ink" href="/reviews/saatva/saatva-rx">
-                  <span>Read Full In-Depth Review →</span>
-                </a>
-              </div>
             </div>
 
-            <div class="m-model-sidebar-card">
+            <div>
+              <p class="m-model-lede">Specially designed for sleepers living with chronic lower back pain, sciatica, arthritis, and joint stiffness. Its patent-pending Therapeutic Support Core features micro-coil modules embedded between resilient foam layers to adapt micro-dynamically to every movement. The supportive, buoyant feel relieves pressure without requiring extra muscle effort to change positions or get out of bed in the morning.</p>
+
+              <div class="m-model-sidebar-card" style="margin-bottom: 24px;">
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2804,6 +2812,18 @@
               </div>
             </div>
             </div>
+
+              <!-- Dual Action CTA Row -->
+              <div class="m-model-cta-row">
+                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/saatva-rx?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+                  <span>Check Saatva RX Price ($600 Off) ↗</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a class="m-btn-secondary-ink" href="/reviews/saatva/saatva-rx">
+                  <span>Read Full In-Depth Review →</span>
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -2816,30 +2836,20 @@
           </div>
 
           <h2 class="m-model-h2" id="saatva-hd">9. Saatva HD Mattress Review</h2>
-          <div class="m-model-illo" role="img" aria-label="Saatva HD architectural watercolor cutaway"><img src="assets/illustrations/saatva_hd_watercolor.jpg" alt="Saatva HD Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
-              <p class="m-model-lede">The first luxury innerspring mattress specifically engineered to provide durable, sag-free ergonomic support for individuals weighing 300 to 500 pounds. Built with 12.5-gauge tempered steel coils (25% stronger than standard coils), reinforced by 5-zone natural Talalay latex and ultra-dense memory foam. Extra-firm foam perimeter rails provide rock-solid edge support and long-term structural integrity.</p>
-              
+              <div class="m-model-illo" role="img" aria-label="Saatva HD architectural watercolor cutaway"><img src="assets/illustrations/saatva_hd_watercolor.jpg" alt="Saatva HD Architectural Watercolor Cutaway" loading="lazy"></div>
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
                 <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">15.5" Heavy-Duty Profile</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Firm (7-8/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 75%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Coil Wire:</span><span class="m-model-spec-v">12.5-Gauge Tempered Steel Support Core</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Comfort Layers:</span><span class="m-model-spec-v">5-Zone Talalay Latex & 5 lb Memory Foam</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Weight Capacity:</span><span class="m-model-spec-v">Engineered for 300-500 lbs Per Sleeper</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
-
-              <!-- Dual Action CTA Row -->
-              <div class="m-model-cta-row">
-                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/saatva-hd?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-                  <span>Check Saatva HD Price ($600 Off) ↗</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-                <a class="m-btn-secondary-ink" href="/reviews/saatva/saatva-hd">
-                  <span>Read Full In-Depth Review →</span>
-                </a>
-              </div>
             </div>
 
-            <div class="m-model-sidebar-card">
+            <div>
+              <p class="m-model-lede">The first luxury innerspring mattress specifically engineered to provide durable, sag-free ergonomic support for individuals weighing 300 to 500 pounds. Built with 12.5-gauge tempered steel coils (25% stronger than standard coils), reinforced by 5-zone natural Talalay latex and ultra-dense memory foam. Extra-firm foam perimeter rails provide rock-solid edge support and long-term structural integrity.</p>
+
+              <div class="m-model-sidebar-card" style="margin-bottom: 24px;">
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2855,6 +2865,18 @@
               </div>
             </div>
             </div>
+
+              <!-- Dual Action CTA Row -->
+              <div class="m-model-cta-row">
+                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/saatva-hd?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+                  <span>Check Saatva HD Price ($600 Off) ↗</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a class="m-btn-secondary-ink" href="/reviews/saatva/saatva-hd">
+                  <span>Read Full In-Depth Review →</span>
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -2867,30 +2889,20 @@
           </div>
 
           <h2 class="m-model-h2" id="saatva-youth">10. Saatva Youth Mattress Review</h2>
-          <div class="m-model-illo" role="img" aria-label="Saatva Youth architectural watercolor cutaway"><img src="assets/illustrations/saatva_youth_watercolor.jpg" alt="Saatva Youth Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
-              <p class="m-model-lede">A dual-sided innerspring mattress designed specifically to adapt to children's growing bodies from early childhood through the pre-teen years. Side 1 provides plush, supportive cushioning for ages 3 to 7, while Side 2 delivers firmer, heavier-duty coil support for ages 8 to 12. The cover features a water-resistant organic cotton barrier and botanical Guardin protection to guard against spills and accidents.</p>
-              
+              <div class="m-model-illo" role="img" aria-label="Saatva Youth architectural watercolor cutaway"><img src="assets/illustrations/saatva_youth_watercolor.jpg" alt="Saatva Youth Architectural Watercolor Cutaway" loading="lazy"></div>
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
                 <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">10" Dual-Sided Kids Mattress</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Flippable: Ages 3-7 (5/10) / Ages 8-12 (7/10) <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 55%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Coil Unit:</span><span class="m-model-spec-v">Dual-Sided Active Innerspring Coils</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Safety Standards:</span><span class="m-model-spec-v">Water-Resistant GOTS Organic Cotton Cover</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
-
-              <!-- Dual Action CTA Row -->
-              <div class="m-model-cta-row">
-                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/saatva-youth?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-                  <span>Check Saatva Youth Price ($600 Off) ↗</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-                <a class="m-btn-secondary-ink" href="/reviews/saatva/saatva-youth">
-                  <span>Read Full In-Depth Review →</span>
-                </a>
-              </div>
             </div>
 
-            <div class="m-model-sidebar-card">
+            <div>
+              <p class="m-model-lede">A dual-sided innerspring mattress designed specifically to adapt to children's growing bodies from early childhood through the pre-teen years. Side 1 provides plush, supportive cushioning for ages 3 to 7, while Side 2 delivers firmer, heavier-duty coil support for ages 8 to 12. The cover features a water-resistant organic cotton barrier and botanical Guardin protection to guard against spills and accidents.</p>
+
+              <div class="m-model-sidebar-card" style="margin-bottom: 24px;">
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2906,6 +2918,18 @@
               </div>
             </div>
             </div>
+
+              <!-- Dual Action CTA Row -->
+              <div class="m-model-cta-row">
+                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/saatva-youth?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+                  <span>Check Saatva Youth Price ($600 Off) ↗</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a class="m-btn-secondary-ink" href="/reviews/saatva/saatva-youth">
+                  <span>Read Full In-Depth Review →</span>
+                </a>
+              </div>
+            </div>
           </div>
         </article>
 
@@ -2918,30 +2942,20 @@
           </div>
 
           <h2 class="m-model-h2" id="crib-mattress">11. Dual-Sided Crib Mattress Review</h2>
-          <div class="m-model-illo" role="img" aria-label="Dual-Sided Crib architectural watercolor cutaway"><img src="assets/illustrations/crib_mattress_watercolor.jpg" alt="Dual-Sided Crib Architectural Watercolor Cutaway" loading="lazy"></div>
           
           <div class="m-model-grid">
             <div>
-              <p class="m-model-lede">Engineered according to strict American Academy of Pediatrics safety standards, offering dual-sided firmness for infants and toddlers. The infant side provides an ultra-firm, flat surface essential for safe infant sleep, while flipping to the toddler side provides gently contoured comfort for active toddlers. Made with certified organic cotton, natural wool, and zero harmful chemicals or emissions.</p>
-              
+              <div class="m-model-illo" role="img" aria-label="Dual-Sided Crib architectural watercolor cutaway"><img src="assets/illustrations/crib_mattress_watercolor.jpg" alt="Dual-Sided Crib Architectural Watercolor Cutaway" loading="lazy"></div>
               <!-- Quick Specs Grid -->
               <div class="m-model-specs-box">
                 <div class="m-model-spec-row"><span class="m-model-spec-k">Profile Height:</span><span class="m-model-spec-v">6" Pediatric Standard</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Firmness Levels:</span><span class="m-model-spec-v">Flippable: Infant Extra Firm / Toddler Firm <span class="m-metric-bar" aria-hidden="true"><span class="m-metric-fill" style="width: 85%;"></span></span></span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Certifications:</span><span class="m-model-spec-v">GREENGUARD Gold Certified · GOTS Organic</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Fire Protection:</span><span class="m-model-spec-v">100% Natural Wool (Chemical-Free)</span></div><div class="m-model-spec-row"><span class="m-model-spec-k">Trial & Warranty:</span><span class="m-model-spec-v">365-Night Home Trial · Lifetime Warranty</span></div>
               </div>
-
-              <!-- Dual Action CTA Row -->
-              <div class="m-model-cta-row">
-                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/crib-mattress?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
-                  <span>Check Dual-Sided Crib Mattress Price ($600 Off) ↗</span>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-                </a>
-                <a class="m-btn-secondary-ink" href="/reviews/saatva/crib-mattress">
-                  <span>Read Full In-Depth Review →</span>
-                </a>
-              </div>
             </div>
 
-            <div class="m-model-sidebar-card">
+            <div>
+              <p class="m-model-lede">Engineered according to strict American Academy of Pediatrics safety standards, offering dual-sided firmness for infants and toddlers. The infant side provides an ultra-firm, flat surface essential for safe infant sleep, while flipping to the toddler side provides gently contoured comfort for active toddlers. Made with certified organic cotton, natural wool, and zero harmful chemicals or emissions.</p>
+
+              <div class="m-model-sidebar-card" style="margin-bottom: 24px;">
               <div class="m-model-sidebar-box">
                 <div class="m-model-sidebar-head">
                 <strong>Why Consider This Model?</strong>
@@ -2956,6 +2970,18 @@
                 </a>
               </div>
             </div>
+            </div>
+
+              <!-- Dual Action CTA Row -->
+              <div class="m-model-cta-row">
+                <a class="m-btn-primary-coral" href="https://www.saatva.com/mattresses/crib-mattress?coupon=nappedia-labor-day" target="_blank" rel="noopener sponsored">
+                  <span>Check Dual-Sided Crib Mattress Price ($600 Off) ↗</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <a class="m-btn-secondary-ink" href="/reviews/saatva/crib-mattress">
+                  <span>Read Full In-Depth Review →</span>
+                </a>
+              </div>
             </div>
           </div>
         </article>
