@@ -297,7 +297,7 @@
     .m-brand-hero {
       padding: 22px 0 var(--section-pad-y) 0;
       background: #ffffff;
-      border-bottom: 1px solid var(--line);
+      border-bottom: none;
     }
     .m-brand-hero-grid {
       display: grid;
@@ -407,10 +407,10 @@
     /* RIGHT BRAND SCORECARD (MATCHES CONCIERGE SAGE MATCHER CARD) */
     .m-hero-scorecard {
       background: var(--teal-soft);
-      border: 1px solid var(--teal-border);
+      border: none;
       border-radius: var(--radius-lg);
       padding: 32px;
-      box-shadow: var(--shadow-md);
+      box-shadow: 0 2px 12px rgba(23, 63, 81, 0.04);
       position: relative;
     }
     .m-score-badge-tag {
@@ -559,7 +559,7 @@
        ========================================================================== */
     .m-section {
       padding: var(--section-pad-y) 0;
-      border-bottom: 1px solid var(--line);
+      border-bottom: none;
     }
     .m-section-header {
       display: flex;
@@ -608,7 +608,7 @@
        ========================================================================== */
     .m-flagship-container {
       background: #ffffff;
-      border: 1px solid rgba(23, 63, 81, 0.05);
+      border: none;
       border-radius: var(--radius-lg);
       padding: 36px;
       box-shadow: 0 2px 12px rgba(23, 63, 81, 0.04);
@@ -675,7 +675,7 @@
       align-items: flex-start;
       gap: 12px;
       background: var(--canvas-subtle);
-      border: 1px solid rgba(23, 63, 81, 0.04);
+      border: none;
       border-radius: var(--radius-sm);
       padding: 10px 14px;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
@@ -743,7 +743,7 @@
     }
     .m-spec-metric-cell {
       background: var(--canvas-subtle);
-      border: 1px solid rgba(23, 63, 81, 0.04);
+      border: none;
       border-radius: var(--radius-sm);
       padding: 12px;
       text-align: center;
@@ -785,7 +785,7 @@
     /* PRODUCT CARD PRIMITIVE */
     .m-product-card {
       background: #ffffff;
-      border: 1px solid rgba(23, 63, 81, 0.05);
+      border: none;
       border-radius: var(--radius-md);
       padding: clamp(16px, 2.2vw, 24px);
       display: flex;
@@ -795,7 +795,6 @@
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .m-product-card:hover {
-      border-color: rgba(45, 139, 130, 0.2);
       transform: translateY(-3px);
       box-shadow: 0 4px 16px rgba(23, 63, 81, 0.06);
     }
@@ -947,7 +946,7 @@
     }
     .m-card-data-sheet {
       background: var(--canvas-subtle);
-      border: 1px solid rgba(23, 63, 81, 0.04);
+      border: none;
       border-radius: var(--radius-sm);
       padding: 10px 12px;
       display: flex;
@@ -986,7 +985,7 @@
        ========================================================================== */
     .m-comp-table-container {
       background: #ffffff;
-      border: 1px solid rgba(23, 63, 81, 0.05);
+      border: none;
       border-radius: var(--radius-lg);
       padding: 28px;
       margin-bottom: 48px;
@@ -1184,19 +1183,19 @@
     }
     .m-model-card {
       background: #ffffff;
-      border: 1px solid rgba(23, 63, 81, 0.05);
+      border: none;
       border-radius: var(--radius-lg);
       padding: 36px;
       box-shadow: 0 2px 12px rgba(23, 63, 81, 0.04);
-      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
       position: relative;
     }
     .m-model-card:hover {
       box-shadow: 0 4px 16px rgba(23, 63, 81, 0.06);
-      border-color: rgba(45, 139, 130, 0.2);
+      transform: translateY(-2px);
     }
     .m-flagship-model-card {
-      border: 1px solid rgba(23, 63, 81, 0.05);
+      border: none;
       background: #ffffff;
       box-shadow: 0 2px 12px rgba(23, 63, 81, 0.04);
       position: relative;
@@ -1253,14 +1252,13 @@
       align-items: flex-start;
       gap: 14px;
       background: #f8fafc;
-      border: 1px solid rgba(23, 63, 81, 0.04);
+      border: none;
       border-radius: 10px;
       padding: 13px 18px;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
-      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      transition: background 0.15s ease, box-shadow 0.15s ease;
     }
     .m-flagship-consolidated-layers .m-flagship-layer-item:hover {
-      border-color: rgba(45, 139, 130, 0.25);
       background: #ffffff;
       box-shadow: 0 2px 8px rgba(23, 63, 81, 0.04);
     }
@@ -1364,7 +1362,7 @@
     }
     .m-model-specs-box {
       background: var(--canvas-subtle);
-      border: 1px solid rgba(23, 63, 81, 0.04);
+      border: none;
       border-radius: var(--radius-md);
       padding: 16px 20px;
       margin-bottom: 24px;
@@ -1406,7 +1404,7 @@
     }
     .m-model-sidebar-box {
       background: var(--canvas-subtle);
-      border: 1px solid rgba(23, 63, 81, 0.04);
+      border: none;
       border-radius: var(--radius-md);
       padding: 22px;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
@@ -1484,7 +1482,7 @@
       margin-bottom: 24px;
       padding: 14px 20px;
       background: #ffffff;
-      border: 1px solid rgba(23, 63, 81, 0.05);
+      border: none;
       border-radius: var(--radius-md);
       box-shadow: 0 2px 12px rgba(23, 63, 81, 0.04);
       flex-wrap: wrap;
@@ -1707,7 +1705,7 @@
     /* FEATURED BEDDING CARD */
     .m-featured-bedding {
       background: #ffffff;
-      border: 1px solid rgba(23, 63, 81, 0.05);
+      border: none;
       border-radius: var(--radius-lg);
       padding: 32px;
       margin-bottom: 28px;
