@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" data-theme="oneDS">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<title>Direct Supply</title>
+		<!-- Google Site Verfication -->
+		<meta
+			name="google-site-verification"
+			content="1Ovi5aTeX3xUuf-du9jH-AUgHYJEdGYEgJahzNFNPro"
+		/>
+		<!-- End Google Site Verfication -->
+
+		<!-- Favicon -->
+		<link rel="icon" href="/DS_Favicon.ico" sizes="any" />
+		<link rel="icon" href="/icon.svg" type="image/svg+xml" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="manifest" href="/static/webmanifest/site.webmanifest" />
+		<meta name="theme-color" content="#0076dd" />
+
+		<!-- DNS prefetch and preconnect for performance optimization -->
+		<link rel="preconnect" href="https://geolocation.onetrust.com" />
+		<link rel="preconnect" href="https://cdn.cookielaw.org" />
+		<link
+			rel="dns-prefetch"
+			href="https://magnolia-public.directsupply.cloud"
+		/>
+
+		<!-- OneTrust Cookies Consent Notice start for directsupply.com -->
+		<script
+			type="text/javascript"
+			src="https://cdn.cookielaw.org/consent/d4bbe08a-ebe6-4a7b-8d03-d35556c8f549/OtAutoBlock.js"
+		></script>
+		<script
+			src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"
+			type="text/javascript"
+			charset="UTF-8"
+			data-domain-script="d4bbe08a-ebe6-4a7b-8d03-d35556c8f549"
+		></script>
+		<script
+			type="text/javascript"
+			src="https://privacycdn.directsupply.com/v1/onetrust-cookie-deletion-script.min.js"
+			data-ot-ignore
+		></script>
+		<!-- OneTrust Cookies Consent Notice end for directsupply.com -->
+
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({
+					'gtm.start': new Date().getTime(),
+					event: 'gtm.js',
+				});
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-MCBLDBQ');
+		</script>
+		<!-- End Google Tag Manager -->
+		<script type="text/javascript" src="https://js-cdn.dynatrace.com/jstag/1612cf70810/bf89518vyu/e916599910286f7b_complete.js" crossorigin="anonymous"></script>
+		<script data-ot-ignore type="module" crossorigin src="/js/index-j78P3gVS.js"></script>
+		<link rel="modulepreload" crossorigin href="/js/react-vendor-C55W0FVS.js">
+		<link rel="modulepreload" crossorigin href="/js/dsx-react-DkJfFYEo.js">
+		<link rel="modulepreload" crossorigin href="/js/icons-vendor-DcsvpIAq.js">
+		<link rel="modulepreload" crossorigin href="/js/router-vendor-CzD4F8fs.js">
+		<link rel="modulepreload" crossorigin href="/js/ds-marketing-BTXBaX9w.js">
+		<link rel="stylesheet" crossorigin href="/css/dsx-react-CoaNNyUd.css">
+		<link rel="stylesheet" crossorigin href="/css/ds-marketing-CE8GPXEv.css">
+		<link rel="stylesheet" crossorigin href="/css/index-CpICveHG.css">
+		<link rel="stylesheet" crossorigin href="/css/dsx-css-Iar8-Qka.css">
+	</head>
+
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-MCBLDBQ"
+				height="0"
+				width="0"
+				style="display: none; visibility: hidden"
+			></iframe
+		></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<noscript> You need to enable JavaScript to run this app. </noscript>
+		<div id="root"></div>
+		<!-- Vite/React entry -->
+	</body>
+</html>

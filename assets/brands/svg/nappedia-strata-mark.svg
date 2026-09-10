@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none" width="120" height="120">
+  <defs>
+    <linearGradient id="strataTealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c6967"/>
+      <stop offset="100%" stop-color="#2cd5c4"/>
+    </linearGradient>
+    <linearGradient id="strataCoralGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d95338"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <!-- Base Squircle with Architectural Navy -->
+  <rect width="120" height="120" rx="30" fill="#0f1c2d"/>
+  <!-- Left Structural Foundation Post -->
+  <rect x="25" y="25" width="16" height="70" rx="8" fill="#faf6ee"/>
+  <!-- Right Structural Core Post -->
+  <rect x="79" y="25" width="16" height="70" rx="8" fill="#faf6ee"/>
+  <!-- Ergonomic Spinal Wave Diagonal -->
+  <path d="M 33.75 32 C 45 32, 55 88, 86.25 88 C 75 88, 65 32, 33.75 32 Z" fill="url(#strataTealGrad)"/>
+  <!-- Rest & Pressure Relief Accent Focal Point -->
+  <circle cx="87" cy="35" r="8" fill="url(#strataCoralGrad)"/>
+</svg>
