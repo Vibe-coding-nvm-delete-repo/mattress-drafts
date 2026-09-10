@@ -1,0 +1,793 @@
+/* ==========================================================================
+   NAPPEDIA CANONICAL UNIVERSAL TOP STRIP, HEADER & FOOTER
+   Official fleet-wide style definitions for Nappedia
+   Universal Standard: 29px Top Deal Strip, 55px Sticky Header, 950px Max Shell
+   ========================================================================== */
+
+/* Strict 950px Max Shell Invariant */
+.m-shell,
+.shell,
+.page-shell,
+.content-shell,
+.research-layout {
+  width: 100% !important;
+  max-width: 950px !important;
+  margin: 0 auto !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  min-width: 0 !important;
+  box-sizing: border-box !important;
+}
+
+/* 1. Universal Centered Top Announcement Deal Strip: Exact 29px Height */
+.np-top-strip,
+.m-deal-strip,
+.top-cta-strip {
+  background: #0e2732 !important;
+  color: #dce9ec !important;
+  padding: 6px 0 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  font-size: 11px !important;
+  line-height: 16px !important;
+  letter-spacing: 0.01em !important;
+  box-sizing: border-box !important;
+  height: 29px !important;
+  position: relative !important;
+  top: 0 !important;
+  margin: 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Plus Jakarta Sans", "Segoe UI", Roboto, sans-serif !important;
+}
+.np-top-strip-inner,
+.m-deal-strip-inner,
+.top-cta-strip-inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  height: 100% !important;
+  line-height: 16px !important;
+  text-align: center !important;
+  max-width: 950px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+}
+.np-top-strip-badge,
+.m-deal-badge {
+  background: linear-gradient(135deg, #e85d41 0%, #cd4b2f 50%, #b83318 100%) !important;
+  color: #ffffff !important;
+  font-size: 10.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.04em !important;
+  padding: 1px 7px !important;
+  border-radius: 4px !important;
+  text-transform: uppercase !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 14px !important;
+  flex-shrink: 0 !important;
+}
+.np-top-strip-text,
+.m-deal-text,
+.strip-cta-text {
+  color: #dce9ec !important;
+  font-weight: 500 !important;
+  font-size: 11px !important;
+  line-height: 16px !important;
+}
+.np-top-strip-text strong,
+.m-deal-text strong,
+.strip-cta-text strong {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+.np-top-strip-link,
+.m-deal-link,
+.strip-cta-btn {
+  color: #f7a38b !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  font-size: 11px !important;
+  line-height: 16px !important;
+  transition: color 0.15s ease !important;
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+.np-top-strip-link:hover,
+.m-deal-link:hover,
+.strip-cta-btn:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+/* 2. Universal Sticky Navigation Header: Exact 55px Height */
+.np-header,
+.m-header,
+.site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  box-shadow: 0 1px 3px rgba(15, 28, 45, 0.03) !important;
+  padding: 8px 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  height: 55px !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Plus Jakarta Sans", "Segoe UI", Roboto, sans-serif !important;
+}
+.np-header-inner,
+.m-header-row-clean,
+.header-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: 55px !important;
+  max-width: 950px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+}
+.np-brand,
+.m-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-decoration: none !important;
+  color: #173f51 !important;
+  flex-shrink: 0 !important;
+}
+.np-brand:hover,
+.m-brand:hover {
+  text-decoration: none !important;
+}
+.np-brand-mark,
+.m-brand-logo-mark {
+  width: 34px !important;
+  height: 34px !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+}
+.np-brand-wrap,
+.m-brand-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  line-height: 1.1 !important;
+}
+.np-brand-title,
+.m-brand-name {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 21px !important;
+  font-weight: 700 !important;
+  color: #173f51 !important;
+  letter-spacing: -0.02em !important;
+}
+.np-brand-tld,
+.m-brand-tld {
+  color: #e85d41 !important;
+}
+.np-brand-subtitle,
+.m-brand-desc,
+.np-brand-desc {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 8.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.12em !important;
+  color: #134e4a !important;
+  text-transform: uppercase !important;
+  margin-top: 1px !important;
+}
+.np-nav,
+.m-nav {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+}
+.np-nav-link,
+.m-nav-link {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #5c727d !important;
+  text-decoration: none !important;
+  padding: 6px 0 !important;
+  position: relative !important;
+  transition: color 0.15s ease !important;
+  line-height: 16px !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  min-height: 0 !important;
+}
+.np-nav-link:hover,
+.m-nav-link:hover {
+  color: #173f51 !important;
+  background: transparent !important;
+}
+.np-nav-link.active,
+.m-nav-link.active {
+  color: #173f51 !important;
+  font-weight: 700 !important;
+}
+.np-nav-link.active::after,
+.m-nav-link.active::after {
+  content: "" !important;
+  position: absolute !important;
+  bottom: -8px !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 2px !important;
+  background: #e85d41 !important;
+  border-radius: 2px !important;
+}
+.np-nav-cta,
+.m-nav-cta,
+.btn-header-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  background: linear-gradient(135deg, #e85d41 0%, #cd4b2f 50%, #b83318 100%) !important;
+  color: #ffffff !important;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  padding: 7px 16px !important;
+  border-radius: 6px !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 8px rgba(232, 93, 65, 0.28) !important;
+  transition: all 0.15s ease !important;
+  flex-shrink: 0 !important;
+  height: 36px !important;
+  box-sizing: border-box !important;
+}
+.np-nav-cta:hover,
+.m-nav-cta:hover,
+.btn-header-cta:hover {
+  background: linear-gradient(135deg, #f06a4f 0%, #e85d41 50%, #cd4b2f 100%) !important;
+  box-shadow: 0 4px 12px rgba(232, 93, 65, 0.40) !important;
+  transform: translateY(-1px) !important;
+}
+
+@media (max-width: 600px) {
+  .np-nav-cta,
+  .m-nav-cta,
+  .btn-header-cta {
+    display: none !important;
+  }
+}
+
+/* Mobile Navigation Drawer */
+.mobile-navigation {
+  display: none !important;
+}
+@media (max-width: 820px) {
+  .np-nav,
+  .m-nav {
+    display: none !important;
+  }
+  .mobile-navigation {
+    display: block !important;
+    position: relative !important;
+  }
+  .mobile-navigation summary {
+    list-style: none !important;
+    cursor: pointer !important;
+    font-weight: 700 !important;
+    font-size: 13px !important;
+    color: #173f51 !important;
+    padding: 6px 12px !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 6px !important;
+    background: #ffffff !important;
+  }
+  .mobile-navigation summary::-webkit-details-marker {
+    display: none !important;
+  }
+  .mobile-navigation:not([open]) nav {
+    display: none !important;
+  }
+  .mobile-navigation[open] nav {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+    width: 220px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+    padding: 14px 16px !important;
+    z-index: 1001 !important;
+  }
+  .mobile-navigation nav a {
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #173f51 !important;
+    padding: 6px 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04) !important;
+    text-decoration: none !important;
+  }
+  .mobile-navigation nav a:last-child {
+    border-bottom: none !important;
+  }
+  .mobile-navigation nav a.active {
+    color: #e85d41 !important;
+  }
+}
+
+/* 3. Universal Footer */
+.np-footer,
+.m-footer {
+  background: #0f1c2d !important;
+  color: #dce9ec !important;
+  padding: 32px 0 20px !important;
+  margin: 0 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-sizing: border-box !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Plus Jakarta Sans", "Segoe UI", Roboto, sans-serif !important;
+}
+.np-footer-shell,
+.m-footer .m-shell {
+  max-width: 950px !important;
+  margin: 0 auto !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+}
+.np-footer-grid,
+.m-footer-grid {
+  display: grid !important;
+  grid-template-columns: 1.5fr 3fr !important;
+  gap: 36px !important;
+  align-items: start !important;
+}
+.np-footer-brand {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+}
+.np-footer-tagline {
+  font-size: 12.5px !important;
+  color: #8da4b0 !important;
+  line-height: 1.5 !important;
+  max-width: 38ch !important;
+  margin: 0 !important;
+}
+.np-footer-cols,
+.m-footer-cols,
+.m-footer-cols-5 {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+}
+.np-footer-col,
+.m-footer-col {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+}
+.np-footer-heading,
+.m-footer-heading {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
+  color: #ffffff !important;
+  margin-bottom: 12px !important;
+  line-height: 1.3 !important;
+}
+.np-footer-link,
+.m-footer-link {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  color: #8da4b0 !important;
+  font-size: 12.5px !important;
+  font-weight: 400 !important;
+  text-decoration: none !important;
+  transition: color 0.15s ease !important;
+  line-height: 1.6 !important;
+  display: block !important;
+  padding: 3px 0 !important;
+}
+.np-footer-link:hover,
+.m-footer-link:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2px !important;
+}
+
+/* Centered Footer TM */
+.np-footer-bottom,
+.m-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+  padding: 22px 0 10px !important;
+  margin-top: 28px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+.np-footer-tm-row,
+.m-footer-tm-row {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  gap: 8px !important;
+}
+.np-footer-copy,
+.m-footer-bottom-copy {
+  display: block !important;
+  color: #94a3b8 !important;
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  margin: 0 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.01em !important;
+}
+.np-footer-tagline-sub,
+.m-footer-bottom-tagline {
+  display: block !important;
+  color: #64748b !important;
+  font-size: 11.5px !important;
+  text-align: center !important;
+  line-height: 1.5 !important;
+  max-width: 640px !important;
+  margin: 0 auto !important;
+}
+
+@media (max-width: 900px) {
+  .np-header-inner,
+  .m-header-row-clean {
+    padding: 0 16px !important;
+  }
+  .np-footer-grid,
+  .m-footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .np-footer-cols,
+  .m-footer-cols {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media (max-width: 480px) {
+  .np-footer-cols,
+  .m-footer-cols {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* 5-Column Institutional Footer (Equidistant Column Balance) */
+.m-footer-cols-5 {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 20px !important;
+}
+@media (max-width: 768px) {
+  .m-footer-cols-5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+  }
+}
+@media (max-width: 420px) {
+  .m-footer-cols-5 {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+/* ==========================================================================
+   UNIVERSAL PRE-FOOTER SLEEP QUIZ CTA (UNIVERSAL 6 STANDARD)
+   ========================================================================== */
+.prefooter-cta-section {
+  padding: 48px 0 36px 0 !important;
+  background: #ffffff !important;
+  box-sizing: border-box !important;
+}
+.sleep-quiz-card {
+  background: linear-gradient(135deg, #0e2732 0%, #173f51 100%) !important;
+  border-radius: 16px !important;
+  padding: 40px 32px !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  box-shadow: 0 4px 20px rgba(23, 63, 81, 0.08) !important;
+  max-width: 950px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+.quiz-kicker {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  color: #2cd5c4 !important;
+  margin-bottom: 8px !important;
+  display: inline-block !important;
+}
+.quiz-headline {
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  margin: 0 0 10px 0 !important;
+  color: #ffffff !important;
+}
+.quiz-body {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: #dce9ec !important;
+  max-width: 620px !important;
+  margin: 0 auto 22px auto !important;
+}
+.quiz-action-group {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+  margin-bottom: 22px !important;
+}
+.quiz-action-group .m-pill-btn-solid {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  padding: 13px 28px !important;
+  background: linear-gradient(135deg, #e85d41 0%, #cd4b2f 50%, #b83318 100%) !important;
+  color: #ffffff !important;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 3px 12px rgba(232, 93, 65, 0.35) !important;
+  text-decoration: none !important;
+  transition: all 0.15s ease !important;
+}
+.quiz-action-group .m-pill-btn-solid:hover {
+  background: linear-gradient(135deg, #ef6a4f 0%, #d95539 50%, #c43c21 100%) !important;
+  box-shadow: 0 5px 16px rgba(232, 93, 65, 0.45) !important;
+  transform: translateY(-1px) !important;
+}
+.quiz-ghost-link {
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #dce9ec !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px !important;
+  transition: color 0.15s ease !important;
+}
+.quiz-ghost-link:hover {
+  color: #ffffff !important;
+}
+.quiz-trust-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 20px !important;
+  flex-wrap: wrap !important;
+  padding-top: 18px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+  font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 12.5px !important;
+  color: #b0c7cf !important;
+}
+.quiz-trust-item {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+@media (max-width: 600px) {
+  .sleep-quiz-card {
+    padding: 28px 18px !important;
+  }
+  .quiz-headline {
+    font-size: 22px !important;
+  }
+  .quiz-body {
+    font-size: 14px !important;
+  }
+  .quiz-trust-row {
+    gap: 12px !important;
+    font-size: 11.5px !important;
+  }
+}
+
+/* ==========================================================================
+   NAPPEDIA INVIOLABLE DESIGN UNIVERSALS
+   ========================================================================== */
+
+/* Universal 1: Content Hyperlinks (Apple Blue Standard) */
+:root {
+  --link-blue: #0066cc;
+  --link-blue-hover: #004499;
+  --link-blue-visited: #0066cc;
+}
+
+a.apple-blue-link,
+.link-content a,
+.answers-content a,
+.m-article-body a,
+.m-guide-body a,
+.guide-prose a,
+.m-shell a:not([class*="btn"]):not([class*="cta"]):not([class*="button"]):not([class*="action"]):not([class*="brand"]):not([class*="deal"]):not([class*="nav"]):not([class*="pill"]):not([class*="chip"]):not([class*="badge"]):not([class*="card"]):not([class*="footer"]):not([class*="quick-jump"]):not([class*="ghost"]) {
+  color: var(--link-blue, #0066cc) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 2.5px !important;
+  transition: color 0.15s ease !important;
+}
+
+a.apple-blue-link:hover,
+.link-content a:hover,
+.answers-content a:hover,
+.m-article-body a:hover,
+.m-guide-body a:hover,
+.guide-prose a:hover,
+.m-shell a:not([class*="btn"]):not([class*="cta"]):not([class*="button"]):not([class*="action"]):not([class*="brand"]):not([class*="deal"]):not([class*="nav"]):not([class*="pill"]):not([class*="chip"]):not([class*="badge"]):not([class*="card"]):not([class*="footer"]):not([class*="quick-jump"]):not([class*="ghost"]):hover {
+  color: var(--link-blue-hover, #004499) !important;
+}
+
+a.apple-blue-link:visited,
+.link-content a:visited,
+.answers-content a:visited,
+.m-article-body a:visited,
+.m-guide-body a:visited,
+.guide-prose a:visited,
+.m-shell a:not([class*="btn"]):not([class*="cta"]):not([class*="button"]):not([class*="action"]):not([class*="brand"]):not([class*="deal"]):not([class*="nav"]):not([class*="pill"]):not([class*="chip"]):not([class*="badge"]):not([class*="card"]):not([class*="footer"]):not([class*="quick-jump"]):not([class*="ghost"]):visited {
+  color: var(--link-blue, #0066cc) !important;
+}
+
+/* Universal Action Buttons & CTAs: Guaranteed Pristine White Text & Zero Underline */
+/* Light-bg buttons excluded: they keep dark text for contrast (B1 B2 fix). Table filter chips excluded too: their base rules own default/active/hover colors. */
+[class*="cta"]:not(.m-final-cta-btn):not(.np-atf-btn-secondary),
+[class*="btn"]:not(.m-final-cta-btn):not(.m-btn-secondary-ink):not(.np-atf-btn-secondary):not(.m-filter-btn),
+a[class*="cta"]:not(.m-final-cta-btn):not(.np-atf-btn-secondary),
+a[class*="btn"]:not(.m-final-cta-btn):not(.m-btn-secondary-ink):not(.np-atf-btn-secondary):not(.m-filter-btn),
+a.m-card-cta,
+.m-card-cta,
+.m-card-cta *,
+.action-coral-cta,
+.action-coral-cta *,
+.cro-coral-cta,
+.cro-coral-cta * {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* Light-bg button contrast restores (must stay after the wildcard above) */
+a.m-btn-secondary-ink,
+.m-btn-secondary-ink {
+  color: #173f51 !important;
+}
+a.m-btn-secondary-ink:hover,
+.m-btn-secondary-ink:hover {
+  color: #1b6860 !important;
+}
+a.m-final-cta-btn,
+.m-final-cta-btn {
+  color: #cd4b2f !important;
+}
+a.np-atf-btn-secondary,
+.np-atf-btn-secondary {
+  color: #173f51 !important;
+}
+a.np-atf-btn-secondary:hover,
+.np-atf-btn-secondary:hover {
+  color: #0e2732 !important;
+}
+
+/* Universal 7: Zero-Orphan Grid Layouts */
+.m-grid-2col {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+.m-grid-3col {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 16px !important;
+}
+@media (max-width: 860px) {
+  .m-grid-3col {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+@media (max-width: 640px) {
+  .m-grid-2col,
+  .m-grid-3col {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ==========================================================================
+   Universal 4: Architectural Vertical Rhythm (Zero-Margin Invariant & 38px Padding)
+   ========================================================================== */
+:root {
+  --section-pad-y: 38px;
+}
+@media (max-width: 1023px) {
+  :root {
+    --section-pad-y: 32px;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --section-pad-y: 28px;
+  }
+}
+
+/* Full-width page sections must have 0 margin and strictly use 38px padding */
+section.m-section,
+section.np-section,
+section.answers-section,
+section.prefooter-cta-section,
+section.m-prefooter-quiz,
+section.m-brands-hero,
+section.m-compare-hero,
+section.m-research-hero,
+section.m-questions-hero,
+section.m-brand-hero,
+section.group,
+main > section {
+  margin: 0 !important;
+}
+
+section.m-section,
+section.np-section,
+section.group {
+  padding-top: var(--section-pad-y, 38px) !important;
+  padding-bottom: var(--section-pad-y, 38px) !important;
+}
+
+/* ==========================================================================
+   Universal 5: Nav-to-H1 Tightness (Eliminate White Void <= 70px)
+   ========================================================================== */
+.m-breadcrumbs-bar,
+.wrap.breadcrumbs-bar {
+  padding: 4px 0 !important;
+  background: transparent !important;
+  box-sizing: border-box !important;
+  height: 24px !important;
+  line-height: 16px !important;
+  margin: 0 !important;
+}
+.m-article-hero {
+  padding-top: 6px !important;
+  margin-top: 0 !important;
+}
+.m-hero-meta-top {
+  margin-bottom: 4px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+}
+.m-hero-meta-sub {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-wrap: wrap !important;
+  margin-top: 8px !important;
+}
